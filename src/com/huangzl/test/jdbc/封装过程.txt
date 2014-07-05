@@ -2,4 +2,4 @@ Jdbc的封装
 1,最原始的DriverManager获取jdbc Connection,例子JdbcStudentDao;特点:没有池化.复杂的异常处理;
 2,DataSource获取jdbc Connection,例子DsStudentDao;特点:单例池化.复杂的异常处理;
 3,模板化的jdbc,例子JdbcTemplateStudentDao;特点:单例池化.异常处理模板化;
-4,x
+4,xx
