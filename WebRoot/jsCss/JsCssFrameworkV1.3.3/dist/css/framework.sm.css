@@ -1,0 +1,1619 @@
+﻿/*core.css*/
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.clear
+{
+    clear: both;
+}
+.fontNowrap
+{
+    white-space: nowrap;
+}
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
+.improtant
+{
+    color: Red;
+    padding-right: 1px;
+}
+/****颜色****/
+.required
+{
+    color: #ff0808;
+}
+.error
+{
+    color: #fe6c00;
+}
+.success
+{
+    color: #64b100;
+}
+.info
+{
+    color: #333;
+}
+.disabled
+{
+    color: #ccc;
+}
+.warnning
+{
+    color: #8b8b8b;
+}
+input[type="text"].error, input[type="password"].error, textarea.error, select.error
+{
+    border: 1px dotted red;
+}
+/*****鼠标点击输入框时效果*****/
+.inputting
+{
+    background-color: #e6eaf0;
+}
+.inputIcon
+{
+    width: 17px;
+    height: 11px;
+    position: absolute;
+    background: url("images/iconInput.gif") no-repeat;
+}
+
+.data-form .panel .body input.error, .data-form .panel .body select.error, .data-form .panel .body textarea.error {
+    border: 1px dotted #ff0808;
+}
+.data-form .panel .body input.error:after > .btn {
+    border-color: #ff0808;
+}
+
+/*form.sm.css*/
+.data-form
+{
+    width: 100%;
+}
+
+/*Input,Text控件*/
+.data-form .panel .body input.xs, .data-form .panel .body textarea.xs, .data-form .panel .body select.xs
+{
+}
+
+.data-form .panel .body input.sm, .data-form .panel .body textarea.sm, .data-form .panel .body select.sm, .sm
+{
+    width: 85px;
+}
+
+.data-form .panel .body input.md, .data-form .panel .body textarea.md, .data-form .panel .body select.md, .md
+{
+    width: 210px;
+}
+
+.data-form .panel .body input.lg, .data-form .panel .body textarea.lg, .data-form .panel .body select.lg, .lg
+{
+    width: 574px;
+}
+
+.data-form .panel .body input.xl, .data-form .panel .body textarea.xl, .data-form .panel .body select.xl
+{
+    width: 938px;
+}
+
+.data-form .panel .body textarea.lg
+{
+    height: 60px;
+}
+
+.data-form .panel .body textarea.xl
+{
+    height: 100px;
+}
+
+.data-form .panel .body div.md
+{
+    width: 480px;
+}
+
+.data-form .panel .body div.lg
+{
+    width: 620px;
+}
+
+.data-form .panel .body div.xl
+{
+    width: 960px;
+}
+/*Panel*/
+.data-form .panel
+{
+    margin: 10px 76px;
+}
+.data-form div.windowView {
+    margin: 10px 0px 0px 0px;
+}
+
+.data-form .panel .head
+{
+    height: 22px;
+    line-height: 22px;
+    color: #202020;
+    font-weight: bold;
+    background: url("images/bgLine.gif") 0 11px repeat-x;
+}
+
+.data-form .panel .head .icon
+{
+    width: 7px;
+    height: 4px;
+    display: block;
+    float: left;
+    margin-top: 8px;
+    background-color: #fff;
+    background: url("images/iconHead.gif") no-repeat;
+}
+
+.data-form .panel .head .title
+{
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 3px;
+    color: #377cbd;
+}
+
+.data-form .panel .body
+{
+    padding: 10px 14px 10px 14px;
+    margin-bottom: 15px;
+}
+/*Table*/
+.table-responsive > .table
+{
+    margin-bottom: 0;
+}
+
+.form-table
+{
+    width: 720px;
+    border-spacing: 0px;
+    border-collapse: inherit;
+    table-layout: fixed;
+}
+
+.form-table tr
+{
+    height: 24px;
+    white-space: nowrap;
+}
+
+.form-table th
+{
+    font-size: 12px;
+    width: 120px;
+    text-align: right;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.form-table th.lg
+{
+    font-size: 12px;
+    text-align: right;
+    line-height: 12px;
+}
+
+.form-table th.xl
+{
+    font-size: 12px;
+    text-align: right;
+    line-height: 12px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.form-table td
+{
+    font-size: 12px;
+    padding: 1px;
+    width: 240px;
+}
+
+.form-table td span.split
+{
+    padding-left: 3px;
+    padding-right: 4px;
+    line-height: 24px;
+    float: left;
+}
+/*控件*/
+.data-form .panel .body input.readonly
+{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+    background: none;
+    border-radius: 0px;
+}
+
+.data-form .panel .body select
+{
+    width: 232px;
+    font-size: 12px;
+    height: 24px;
+    padding: 2px 6px 2px 10px;
+    line-height: 16px;
+    border-radius: 3px;
+    color: #555555;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    background-color: #f6faff;
+    cursor: pointer;
+}
+
+.data-form .panel .body input[type="checkbox"], .data-form .panel .body input[type="radio"]
+{
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+    line-height: 24px;
+    border: none;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.data-form .panel .body label
+{
+    line-height: 30px;
+    padding-right: 24px;
+    font-weight: bold;
+}
+
+.data-form .panel .body input, .data-form .panel .body input, .data-form .panel .body textarea
+{
+    width: 210px;
+    height: 16px;
+    font-size: 12px;
+    padding: 3px 10px 3px 10px;
+    line-height: 16px;
+    border-radius: 3px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    background-color: #f6faff;
+    cursor: pointer;
+}
+
+.data-form .panel .body input:focus, .data-form .panel .body select:focus, .data-form .panel .body textarea:focus
+{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+/*下拉选择*/
+.data-form .panel .body .selectPanel
+{
+    position: absolute;
+    display: none;
+    z-index: 999;
+    width: 230px;
+    height: 360px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #617775;
+    background: #f0f6e4;
+}
+
+.data-form .panel .body .selectPanel ul.ztree
+{
+    margin-top: 10px;
+}
+
+
+/*InputGroup*/
+.data-form .panel .body .input-group
+{
+    display: table;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+.data-form .panel .body .input-group input[type="text"], .data-form .panel .body .input-group input[type="password"]
+{
+    width: 180px;
+}
+
+.data-form .panel .body .input-group input[type="text"].lg, .data-form .panel .body .input-group input[type="password"].lg
+{
+    width: 514px;
+}
+
+.data-form .panel .body .input-group input[type="text"].sm, .data-form .panel .body .input-group input[type="password"].sm
+{
+    width: 65px;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+.data-form .panel .body .input-group input[type="text"].md, .data-form .panel .body .input-group input[type="password"].md
+{
+    width: 60px;
+    padding-right: 5px;
+}
+
+.input-group-btn, .data-form .panel .body .input-group input, .data-form .panel .body .input-group select
+{
+    position: relative;
+    display: table-cell;
+    border-spacing: 0px;
+}
+
+.input-group-btn
+{
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.data-form .panel .body .input-group input:first-child:not(:only-child), 
+.data-form .panel .body .input-group select:first-child, 
+.input-group-btn:first-child > .btn, 
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle)
+{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.data-form .panel .body .input-group input:last-child:not(:only-child), 
+.data-form .panel .body .input-group select:last-child, 
+.input-group-btn:last-child > div > .btn, 
+.input-group-btn:last-child > .btn, 
+.input-group-btn:last-child > .dropdown-toggle, 
+.data-form .panel .body .input-group-btn:first-child > .btn:not(:first-child)
+{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.input-group-btn
+{
+    position: relative;
+    white-space: nowrap;
+}
+
+.input-group-btn > .btn
+{
+    position: relative;
+    right: 1px;
+}
+
+.input-group-btn > .btn + .btn
+{
+    margin-left: -2px;
+}
+
+.input-group-btn > .btn:hover, .input-group-btn > .btn:active
+{
+    z-index: 2;
+}
+
+.input-group .lg .btn
+{
+    width: 60px;
+}
+
+.btn
+{
+    width: 31px;
+    height: 24px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.btn:focus
+{
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.btn:hover, .btn:focus
+{
+    color: #333333;
+    text-decoration: none;
+}
+
+.btn:active, .btn.active
+{
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-default
+{
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #cccccc;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+{
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+
+.btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+{
+    background-image: none;
+}
+/*input-group-select*/
+.data-form .panel .body .input-group-select
+{
+    border-spacing: 0px;
+}
+
+.data-form .panel .body .input-group-select input
+{
+    width: 127px;
+}
+
+.data-form .panel .body .input-group-select select
+{
+    width: 80px;
+}
+
+.data-form .panel .body .input-group-select.lg
+{
+    display: table;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+.data-form .panel .body .input-group-select.lg input
+{
+    width: 431px;
+}
+
+.data-form .panel .body .input-group-select.lg select
+{
+    width: 140px;
+}
+
+/*按钮*/
+.button-bar
+{
+    height: 30px;
+    padding-left: 212px;
+    margin-top: 4px;
+}
+
+.button-bar button, .button-bar button:hover
+{
+    width: 97px;
+    height: 30px;
+    border: 0;
+    cursor: pointer; 
+    margin-right: 8px;
+    font-weight: normal;
+}
+
+.button-bar button
+{
+    background: url("images/bgFormBtn.gif") no-repeat;
+}
+
+.button-bar button:hover
+{
+    color: #fff;
+    background: url("images/bgFormBtnHover.gif") no-repeat;
+}
+/*上传框*/
+.uploadPanel
+{
+    width: 430px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: #fff;
+    border: 1px #ccc solid;
+}
+
+.uploadPanel ul
+{
+    width: 420px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    display: block;
+    clear: both;
+}
+
+.uploadPanel ul li
+{
+    width: 100%;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    list-style: none;
+    padding-left: 10px;
+    cursor: default;
+    border-bottom: 1px dotted #dfdfdf;
+    color: #999;
+    overflow: hidden;
+}
+.uploadPanel li:last-child
+{
+    border: none;
+}
+
+.uploadPanel ul li .left
+{
+    width: 360px;
+    color: #333532;
+    overflow: hidden;
+}
+.uploadPanel ul li .left span
+{
+    margin-left: 12px;
+}
+
+.uploadPanel ul li .right
+{
+    margin-right: 10px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+}
+/*CheckBox */
+.checkBoxAll
+{
+    float: right;
+    cursor: pointer;
+    margin: 5px 7px 10px 0;
+    display: block;
+    z-index: 999;
+}
+
+/*gluphicon.css*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+      url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+      url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+      url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon:empty {
+  width: 1em;
+}
+
+.glyphicon-asterisk:before {
+  content: "\2a";
+}
+
+.glyphicon-plus:before {
+  content: "\2b";
+}
+
+.glyphicon-euro:before {
+  content: "\20ac";
+}
+
+.glyphicon-minus:before {
+  content: "\2212";
+}
+
+.glyphicon-cloud:before {
+  content: "\2601";
+}
+
+.glyphicon-envelope:before {
+  content: "\2709";
+}
+
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+
+.glyphicon-glass:before {
+  content: "\e001";
+}
+
+.glyphicon-music:before {
+  content: "\e002";
+}
+
+.glyphicon-search:before {
+  content: "\e003";
+}
+
+.glyphicon-heart:before {
+  content: "\e005";
+}
+
+.glyphicon-star:before {
+  content: "\e006";
+}
+
+.glyphicon-star-empty:before {
+  content: "\e007";
+}
+
+.glyphicon-user:before {
+  content: "\e008";
+}
+
+.glyphicon-film:before {
+  content: "\e009";
+}
+
+.glyphicon-th-large:before {
+  content: "\e010";
+}
+
+.glyphicon-th:before {
+  content: "\e011";
+}
+
+.glyphicon-th-list:before {
+  content: "\e012";
+}
+
+.glyphicon-ok:before {
+  content: "\e013";
+}
+
+.glyphicon-remove:before {
+  content: "\e014";
+}
+
+.glyphicon-zoom-in:before {
+  content: "\e015";
+}
+
+.glyphicon-zoom-out:before {
+  content: "\e016";
+}
+
+.glyphicon-off:before {
+  content: "\e017";
+}
+
+.glyphicon-signal:before {
+  content: "\e018";
+}
+
+.glyphicon-cog:before {
+  content: "\e019";
+}
+
+.glyphicon-trash:before {
+  content: "\e020";
+}
+
+.glyphicon-home:before {
+  content: "\e021";
+}
+
+.glyphicon-file:before {
+  content: "\e022";
+}
+
+.glyphicon-time:before {
+  content: "\e023";
+}
+
+.glyphicon-road:before {
+  content: "\e024";
+}
+
+.glyphicon-download-alt:before {
+  content: "\e025";
+}
+
+.glyphicon-download:before {
+  content: "\e026";
+}
+
+.glyphicon-upload:before {
+  content: "\e027";
+}
+
+.glyphicon-inbox:before {
+  content: "\e028";
+}
+
+.glyphicon-play-circle:before {
+  content: "\e029";
+}
+
+.glyphicon-repeat:before {
+  content: "\e030";
+}
+
+.glyphicon-refresh:before {
+  content: "\e031";
+}
+
+.glyphicon-list-alt:before {
+  content: "\e032";
+}
+
+.glyphicon-lock:before {
+  content: "\e033";
+}
+
+.glyphicon-flag:before {
+  content: "\e034";
+}
+
+.glyphicon-headphones:before {
+  content: "\e035";
+}
+
+.glyphicon-volume-off:before {
+  content: "\e036";
+}
+
+.glyphicon-volume-down:before {
+  content: "\e037";
+}
+
+.glyphicon-volume-up:before {
+  content: "\e038";
+}
+
+.glyphicon-qrcode:before {
+  content: "\e039";
+}
+
+.glyphicon-barcode:before {
+  content: "\e040";
+}
+
+.glyphicon-tag:before {
+  content: "\e041";
+}
+
+.glyphicon-tags:before {
+  content: "\e042";
+}
+
+.glyphicon-book:before {
+  content: "\e043";
+}
+
+.glyphicon-bookmark:before {
+  content: "\e044";
+}
+
+.glyphicon-print:before {
+  content: "\e045";
+}
+
+.glyphicon-camera:before {
+  content: "\e046";
+}
+
+.glyphicon-font:before {
+  content: "\e047";
+}
+
+.glyphicon-bold:before {
+  content: "\e048";
+}
+
+.glyphicon-italic:before {
+  content: "\e049";
+}
+
+.glyphicon-text-height:before {
+  content: "\e050";
+}
+
+.glyphicon-text-width:before {
+  content: "\e051";
+}
+
+.glyphicon-align-left:before {
+  content: "\e052";
+}
+
+.glyphicon-align-center:before {
+  content: "\e053";
+}
+
+.glyphicon-align-right:before {
+  content: "\e054";
+}
+
+.glyphicon-align-justify:before {
+  content: "\e055";
+}
+
+.glyphicon-list:before {
+  content: "\e056";
+}
+
+.glyphicon-indent-left:before {
+  content: "\e057";
+}
+
+.glyphicon-indent-right:before {
+  content: "\e058";
+}
+
+.glyphicon-facetime-video:before {
+  content: "\e059";
+}
+
+.glyphicon-picture:before {
+  content: "\e060";
+}
+
+.glyphicon-map-marker:before {
+  content: "\e062";
+}
+
+.glyphicon-adjust:before {
+  content: "\e063";
+}
+
+.glyphicon-tint:before {
+  content: "\e064";
+}
+
+.glyphicon-edit:before {
+  content: "\e065";
+}
+
+.glyphicon-share:before {
+  content: "\e066";
+}
+
+.glyphicon-check:before {
+  content: "\e067";
+}
+
+.glyphicon-move:before {
+  content: "\e068";
+}
+
+.glyphicon-step-backward:before {
+  content: "\e069";
+}
+
+.glyphicon-fast-backward:before {
+  content: "\e070";
+}
+
+.glyphicon-backward:before {
+  content: "\e071";
+}
+
+.glyphicon-play:before {
+  content: "\e072";
+}
+
+.glyphicon-pause:before {
+  content: "\e073";
+}
+
+.glyphicon-stop:before {
+  content: "\e074";
+}
+
+.glyphicon-forward:before {
+  content: "\e075";
+}
+
+.glyphicon-fast-forward:before {
+  content: "\e076";
+}
+
+.glyphicon-step-forward:before {
+  content: "\e077";
+}
+
+.glyphicon-eject:before {
+  content: "\e078";
+}
+
+.glyphicon-chevron-left:before {
+  content: "\e079";
+}
+
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}
+
+.glyphicon-plus-sign:before {
+  content: "\e081";
+}
+
+.glyphicon-minus-sign:before {
+  content: "\e082";
+}
+
+.glyphicon-remove-sign:before {
+  content: "\e083";
+}
+
+.glyphicon-ok-sign:before {
+  content: "\e084";
+}
+
+.glyphicon-question-sign:before {
+  content: "\e085";
+}
+
+.glyphicon-info-sign:before {
+  content: "\e086";
+}
+
+.glyphicon-screenshot:before {
+  content: "\e087";
+}
+
+.glyphicon-remove-circle:before {
+  content: "\e088";
+}
+
+.glyphicon-ok-circle:before {
+  content: "\e089";
+}
+
+.glyphicon-ban-circle:before {
+  content: "\e090";
+}
+
+.glyphicon-arrow-left:before {
+  content: "\e091";
+}
+
+.glyphicon-arrow-right:before {
+  content: "\e092";
+}
+
+.glyphicon-arrow-up:before {
+  content: "\e093";
+}
+
+.glyphicon-arrow-down:before {
+  content: "\e094";
+}
+
+.glyphicon-share-alt:before {
+  content: "\e095";
+}
+
+.glyphicon-resize-full:before {
+  content: "\e096";
+}
+
+.glyphicon-resize-small:before {
+  content: "\e097";
+}
+
+.glyphicon-exclamation-sign:before {
+  content: "\e101";
+}
+
+.glyphicon-gift:before {
+  content: "\e102";
+}
+
+.glyphicon-leaf:before {
+  content: "\e103";
+}
+
+.glyphicon-fire:before {
+  content: "\e104";
+}
+
+.glyphicon-eye-open:before {
+  content: "\e105";
+}
+
+.glyphicon-eye-close:before {
+  content: "\e106";
+}
+
+.glyphicon-warning-sign:before {
+  content: "\e107";
+}
+
+.glyphicon-plane:before {
+  content: "\e108";
+}
+
+.glyphicon-calendar:before {
+  content: "\e109";
+}
+
+.glyphicon-random:before {
+  content: "\e110";
+}
+
+.glyphicon-comment:before {
+  content: "\e111";
+}
+
+.glyphicon-magnet:before {
+  content: "\e112";
+}
+
+.glyphicon-chevron-up:before {
+  content: "\e113";
+}
+
+.glyphicon-chevron-down:before {
+  content: "\e114";
+}
+
+.glyphicon-retweet:before {
+  content: "\e115";
+}
+
+.glyphicon-shopping-cart:before {
+  content: "\e116";
+}
+
+.glyphicon-folder-close:before {
+  content: "\e117";
+}
+
+.glyphicon-folder-open:before {
+  content: "\e118";
+}
+
+.glyphicon-resize-vertical:before {
+  content: "\e119";
+}
+
+.glyphicon-resize-horizontal:before {
+  content: "\e120";
+}
+
+.glyphicon-hdd:before {
+  content: "\e121";
+}
+
+.glyphicon-bullhorn:before {
+  content: "\e122";
+}
+
+.glyphicon-bell:before {
+  content: "\e123";
+}
+
+.glyphicon-certificate:before {
+  content: "\e124";
+}
+
+.glyphicon-thumbs-up:before {
+  content: "\e125";
+}
+
+.glyphicon-thumbs-down:before {
+  content: "\e126";
+}
+
+.glyphicon-hand-right:before {
+  content: "\e127";
+}
+
+.glyphicon-hand-left:before {
+  content: "\e128";
+}
+
+.glyphicon-hand-up:before {
+  content: "\e129";
+}
+
+.glyphicon-hand-down:before {
+  content: "\e130";
+}
+
+.glyphicon-circle-arrow-right:before {
+  content: "\e131";
+}
+
+.glyphicon-circle-arrow-left:before {
+  content: "\e132";
+}
+
+.glyphicon-circle-arrow-up:before {
+  content: "\e133";
+}
+
+.glyphicon-circle-arrow-down:before {
+  content: "\e134";
+}
+
+.glyphicon-globe:before {
+  content: "\e135";
+}
+
+.glyphicon-wrench:before {
+  content: "\e136";
+}
+
+.glyphicon-tasks:before {
+  content: "\e137";
+}
+
+.glyphicon-filter:before {
+  content: "\e138";
+}
+
+.glyphicon-briefcase:before {
+  content: "\e139";
+}
+
+.glyphicon-fullscreen:before {
+  content: "\e140";
+}
+
+.glyphicon-dashboard:before {
+  content: "\e141";
+}
+
+.glyphicon-paperclip:before {
+  content: "\e142";
+}
+
+.glyphicon-heart-empty:before {
+  content: "\e143";
+}
+
+.glyphicon-link:before {
+  content: "\e144";
+}
+
+.glyphicon-phone:before {
+  content: "\e145";
+}
+
+.glyphicon-pushpin:before {
+  content: "\e146";
+}
+
+.glyphicon-usd:before {
+  content: "\e148";
+}
+
+.glyphicon-gbp:before {
+  content: "\e149";
+}
+
+.glyphicon-sort:before {
+  content: "\e150";
+}
+
+.glyphicon-sort-by-alphabet:before {
+  content: "\e151";
+}
+
+.glyphicon-sort-by-alphabet-alt:before {
+  content: "\e152";
+}
+
+.glyphicon-sort-by-order:before {
+  content: "\e153";
+}
+
+.glyphicon-sort-by-order-alt:before {
+  content: "\e154";
+}
+
+.glyphicon-sort-by-attributes:before {
+  content: "\e155";
+}
+
+.glyphicon-sort-by-attributes-alt:before {
+  content: "\e156";
+}
+
+.glyphicon-unchecked:before {
+  content: "\e157";
+}
+
+.glyphicon-expand:before {
+  content: "\e158";
+}
+
+.glyphicon-collapse-down:before {
+  content: "\e159";
+}
+
+.glyphicon-collapse-up:before {
+  content: "\e160";
+}
+
+.glyphicon-log-in:before {
+  content: "\e161";
+}
+
+.glyphicon-flash:before {
+  content: "\e162";
+}
+
+.glyphicon-log-out:before {
+  content: "\e163";
+}
+
+.glyphicon-new-window:before {
+  content: "\e164";
+}
+
+.glyphicon-record:before {
+  content: "\e165";
+}
+
+.glyphicon-save:before {
+  content: "\e166";
+}
+
+.glyphicon-open:before {
+  content: "\e167";
+}
+
+.glyphicon-saved:before {
+  content: "\e168";
+}
+
+.glyphicon-import:before {
+  content: "\e169";
+}
+
+.glyphicon-export:before {
+  content: "\e170";
+}
+
+.glyphicon-send:before {
+  content: "\e171";
+}
+
+.glyphicon-floppy-disk:before {
+  content: "\e172";
+}
+
+.glyphicon-floppy-saved:before {
+  content: "\e173";
+}
+
+.glyphicon-floppy-remove:before {
+  content: "\e174";
+}
+
+.glyphicon-floppy-save:before {
+  content: "\e175";
+}
+
+.glyphicon-floppy-open:before {
+  content: "\e176";
+}
+
+.glyphicon-credit-card:before {
+  content: "\e177";
+}
+
+.glyphicon-transfer:before {
+  content: "\e178";
+}
+
+.glyphicon-cutlery:before {
+  content: "\e179";
+}
+
+.glyphicon-header:before {
+  content: "\e180";
+}
+
+.glyphicon-compressed:before {
+  content: "\e181";
+}
+
+.glyphicon-earphone:before {
+  content: "\e182";
+}
+
+.glyphicon-phone-alt:before {
+  content: "\e183";
+}
+
+.glyphicon-tower:before {
+  content: "\e184";
+}
+
+.glyphicon-stats:before {
+  content: "\e185";
+}
+
+.glyphicon-sd-video:before {
+  content: "\e186";
+}
+
+.glyphicon-hd-video:before {
+  content: "\e187";
+}
+
+.glyphicon-subtitles:before {
+  content: "\e188";
+}
+
+.glyphicon-sound-stereo:before {
+  content: "\e189";
+}
+
+.glyphicon-sound-dolby:before {
+  content: "\e190";
+}
+
+.glyphicon-sound-5-1:before {
+  content: "\e191";
+}
+
+.glyphicon-sound-6-1:before {
+  content: "\e192";
+}
+
+.glyphicon-sound-7-1:before {
+  content: "\e193";
+}
+
+.glyphicon-copyright-mark:before {
+  content: "\e194";
+}
+
+.glyphicon-registration-mark:before {
+  content: "\e195";
+}
+
+.glyphicon-cloud-download:before {
+  content: "\e197";
+}
+
+.glyphicon-cloud-upload:before {
+  content: "\e198";
+}
+
+.glyphicon-tree-conifer:before {
+  content: "\e199";
+}
+
+.glyphicon-tree-deciduous:before {
+  content: "\e200";
+}
+
+/*searchpanel.css*/
+.data-form .searchPanel .head {
+    background: none;
+}
+
+    .data-form .searchPanel .head .title {
+        margin-left: 5px;
+        font-size: 18px;
+        color: black;
+    }
+
+.searchPanel, .data-form .searchPanel {
+    padding: 0px;
+    width: 99%;
+    font-size: 13px;
+    cursor: default;
+    margin: 10px 1px;
+}
+
+    .data-form .searchPanel .body {
+        min-width: 840px;
+        padding: 14px 0px 20px 0px;
+        margin: 10px 5px 0px 10px;
+    }
+/*listBox*/
+dl.listBox {
+    margin: 0px;
+    font-size: 13px;
+    color: #004473;
+    line-height: 20px;
+}
+
+    dl.listBox:first-child {
+        padding-top: 3px;
+    }
+
+    dl.listBox dd {
+        width: 60px;
+        padding: 2px 5px 2px 3px;
+        text-align: left;
+        overflow: hidden;
+        float: left;
+        text-align: left;
+        margin: 2px 2px 0px 0px;
+        cursor: pointer;
+        line-height: 20px;
+    }
+
+        dl.listBox dd.lg, .searchPanel dl.listBox dd.lg {
+            width: 130px;
+        }
+
+        dl.listBox dd.xl, .searchPanel dl.listBox dd.xl {
+            width: 200px;
+        }
+
+        dl.listBox dd.more {
+            font-weight: bold;
+        }
+
+        dl.listBox dd.selected {
+            color: white;
+            background-color: #bbb;
+        }
+/*SearchPanel Base*/
+.searchPanel .searchBox {
+    height: 23px;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.searchPanel .displayBox {
+    text-align: center;
+    min-width: 840px;
+    padding: 0px 10px 0px 10px;
+    border-top: 1px dotted #ccc;
+}
+
+    .searchPanel .displayBox button {
+        width: 70px;
+        height: 14px;
+        border: none;
+        background-color: white;
+        display: block;
+        cursor: pointer;
+        margin: 0px auto;
+    }
+
+.searchPanel .button-bar {
+    width: 98%;
+    min-width: 840px;
+    text-align: right;
+    margin-top: 4px;
+    margin-left: 0px;
+    padding: 0px;
+    margin-right: 40px;
+}
+
+.searchPanel .baseInfo {
+    display: block;
+}
+
+.searchPanel .extInfo {
+    display: none;
+}
+/*tabel*/
+.searchPanel .form-table {
+    table-layout: auto;
+}
+
+    .searchPanel .form-table th {
+        width: 80px;
+        min-width: 80px;
+        max-width: 80px;
+        vertical-align: top;
+        padding-top: 6px;
+        line-height: 20px;
+        font-weight: normal;
+    }
+
+    .searchPanel .form-table td {
+        width: 190px;
+        min-width: 190px;
+        max-width: 190px;
+        text-align: left;
+    }
+
+.data-form .searchPanel .body input, .data-form .searchPanel .body textarea {
+    width: 160px;
+}
+.data-form .searchPanel .body input.lg, .data-form .searchPanel .body textarea.lg {
+    width: 434px;
+}
+.data-form .searchPanel .body input.xl, .data-form .searchPanel .body textarea.xl {
+    width: 708px;
+}
+.data-form .searchPanel .body select {
+    width: 182px;
+}
+
+.data-form .searchPanel .body .input-group input[type="text"] {
+    width: 130px;
+}
+
+    .data-form .searchPanel .body .input-group input[type="text"].lg {
+        width: 434px;
+    }
+
+    .data-form .searchPanel .body .input-group input[type='text'].sm {
+        width: 70px;
+        padding-left: 5px;
+        padding-right: 4px;
+    }
+
+.data-form .searchPanel .body .split {
+    text-align: center;
+    display: block;
+}
+/*input-group-select*/
+.data-form .panel .body .input-group-select input .data-form .searchPanel .body td[colspan="3"] .input-group-select {
+    width: 460px;
+}
+
+.data-form .searchPanel .body td[colspan="3"] .input-group-select input {
+    width: 351px;
+}
+
+.data-form .searchPanel .body td[colspan="5"] .input-group-select {
+    width: 730px;
+}
+
+    .data-form .searchPanel .body td[colspan="5"] .input-group-select input {
+        width: 565px;
+    }
+
+
+
+
+

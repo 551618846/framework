@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>dropdownbox</title>
+
+   
+    <link href="../../libs/framework/css/gluphicon.css" rel="stylesheet" />
+
+    <link href="../../libs/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+
+    <link href="../../libs/framework/css/form.css" rel="stylesheet" />
+    
+    
+
+        <link href="note/note.css" rel="stylesheet" />
+        
+        <link href="note/shCoreDefault.css" rel="stylesheet" />
+        <script src="note/shCore.js"></script>
+        <script src="note/shBrushJScript.js"></script>
+        <script src="note/shBrushXml.js"></script>
+
+    <script src="../../libs/jquery/jquery.min.js"></script>
+
+    <script src="../../libs/zTree_v3/js/jquery.ztree.all-3.5.min.js"></script>
+    <script src="../../libs/framework/controls/corebox.js"></script>
+
+
+    <script src="../../libs/framework/controls/dropdownbox.js"></script>
+    <script src="../../libs/framework/controls/core.js"></script>
+
+        <script src="note/note.js"></script>
+
+
+        <script type="text/javascript">SyntaxHighlighter.all();</script>
+       
+        
+        
+        
+        
+        <script type="text/javascript">
+            
+
+            $(function () {
+                $("#abc").dropDownBox({                    
+                    data: [{ id: 1, pId: 0, name: "北京" },
+                   { id: 2, pId: 0, name: "河北省", open: true, nocheck: true },
+                   { id: 21, pId: 2, name: "石家庄" },
+                   { id: 22, pId: 2, name: "保定" },
+                   { id: 23, pId: 2, name: "邯郸" },
+                   { id: 24, pId: 2, name: "承德" },
+                   { id: 3, pId: 0, name: "广东省", open: true, nocheck: true },
+                   { id: 31, pId: 3, name: "广州" },
+                   { id: 32, pId: 3, name: "深圳" },
+                   { id: 33, pId: 3, name: "东莞" },
+                   { id: 34, pId: 3, name: "佛山" }], 
+                    
+                });
+            })
+
+
+            $(function () {
+                $("#def").dropDownBox({
+                    selectType: "list",
+                    multiple: true,
+                    onSelect: function () { alert("你触发了选择事件") }
+                });
+            })
+            function a() { alert("你利用data-onSelect触发了选择事件") }
+              
+        </script>
+        
+        
+        
+</head>
+
+
+<body >
+    
+    
+    
+   <div id="div1">
+    <ul id="left" >
+        <li><a href="#summary">简介</a></li>
+        <li><a href="#rely">依赖</a></li>
+        <li><a href="#contain">包含</a></li>
+        <li><a href="#use">使用方法</a></li>
+        <li><a href="#property">属性</a></li>
+
+    </ul>
+    </div>
+    
+    
+    
+    
+    <div id="Main" align="right">
+    
+    
+     <div id="Content" align="left">
+      <div id="title" align="center" ><h1>dropdownbox下拉选择框</h1></div>
+      
+    
+      <div><h2 id="summary">简介</h2></div>
+      <div><ul>
+        <li>实现文本框下拉选择效果</li>
+        <li>分为<b>普通下拉选择框</b>和<b>树形下拉选择框</b>两种</li>
+
+      </ul>
+     <!-- <h4>原始效果示例：</h4>
+            
+            <pre><form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+            <input name="tree1" id="tree1" type="text" class="listBox" data-url="/Data/listData2.js"  placeholder="请选择">
+            </div></div></form> </pre>
+      
+          
+          
+          
+                                  
+            <pre><pre class="brush:html" >                
+  <form id="Form1" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panels">
+        <div class="body"> 
+            <input name="tree1" id="Text4" type="text" class="listΒox" data-url="/Data/listData2.js" placeholder="请选择"/>                                 
+        </div>
+    </div>
+  </form></pre></pre>-->
+        </div>
+      
+      
+         <div><h2 id="rely">依赖</h2></div>
+         <div><ul>
+           <li>jQuery</li>
+           <li>下拉列表的效果和样色依赖ztree</li>
+           <li>按钮的样色依赖Bootstrap的gluphion图标，详细使用方法请参考<a href="http://v3.bootcss.com/components/" target="_blank" >bootstrap官网</a></li>
+         </ul></div>
+         
+         
+         
+         <div><h2 id="contain">包含</h2></div>
+         <div><h3>&nbsp&nbsp&nbsp&nbsp  JS文件</h3>
+         <ul>
+           <li>libs/zTree_v3/js/<b>jquery.ztree.all-3.5.min.js</b></li>
+           <li>libs/framework/controls/<b>core.js</b></li>
+           <li>libs/framework/controls/<b>corebox.js</b></li>
+           <li>libs/framework/controls/<b>dropdownbox.js</b></li>
+                      
+         </ul>
+         <h3>&nbsp&nbsp&nbsp&nbsp  CSS文件</h3>
+          <ul>
+           <li>libs/framework/css/<b>gluphicon.css</b></li>
+           <li>libs/zTree_v3/css/zTreeStyle/<b>zTreeStyle.css</b></li>
+           <li>libs/framework/css/<b>form.css</b></li>
+         </ul></div>
+         
+         <div><h2 id="use">使用方法</h2></div>
+         <div><h3>&nbsp&nbsp&nbsp&nbsp  绑定方法</h3>
+           <ul>
+             <li><b>普通下拉选择框:</b>找到需要绑定的<b>input</b>标签，设置标签的<b>class="listBox"</b>即可</li>
+             <li><b>树形下拉选择框:</b>找到需要绑定的<b>input</b>标签，设置标签的<b>class="treeBox"</b>即可</li>
+             
+             
+           </ul>
+<!--            <pre><input  type="text" class="listBox" name="list2" data-url="/Data/treeData2.js"/></pre>-->
+           <h4>代码：</h4>
+            <pre>
+            <pre class="brush:html" >             <input  type="text" class="treeΒox" data-url="/Data/treeData2.js"  /></pre>
+            </pre>
+           <ul>
+             <li>上述方法只是绑定了相应的dropdownbox的下拉窗功能，如需<b>绑定完整样色</b>，则通过以下<b>class的嵌套来绑定样色</b>。<br />&nbsp<b>class嵌套：<br />&nbsp&nbsp&nbsp<b>普通下拉选择框:</b><b style="color:#f00;">data-form→panel→body→listBox</b>
+                                                                                                                                           <br />&nbsp&nbsp&nbsp<b>树形下拉选择框:</b><b style="color:#f00;">data-form→panel→body→treeBox</b>
+                                                                                                                                                             </b></li>
+             
+           </ul>
+            <pre><form class="data-form">
+    <div class="panel">
+      <div class="body">
+          <label>树形下拉选择框:</label>
+          <input name="tree1"  type="text" class="treeBox" data-url="/Data/treeData2.js"/>
+          <label>普通下拉选择框:</label> 
+          <input name="list1"  type="text" class="listBox" data-url="/Data/listData2.js"/>
+      </div></div></form>            </pre>
+
+
+
+             <pre><pre class="brush:html">  <form class="data-form">
+    <div class="panel">
+      <div class="body"> 
+        <label>树形下拉选择框:</label>
+        <input name="tree1"  type="text" class="treeΒox" data-url="/Data/treeData2.js"/>
+        <label>普通下拉选择框:</label> 
+        <input name="list1"  type="text" class="listΒox" data-url="/Data/listData2.js"/>                      
+      </div>
+    </div>
+  </form></pre> </pre>
+           <ul>
+               <li><b>如需要更改dropdownbox的默认值<a href="#default">(点击这里查看默认值)</a></b>，则不能用通过以上方法绑定，<br />需要通过以下<b>js绑定相应id或class</b>来实现。</li>
+
+           </ul>
+          <h4>例子：设置为普通下拉多选框</h4>
+            <pre>
+               <form  action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">            
+            <input name="tree2"  type="text" id="def" data-url="/Data/listData2.js"/>
+            </div></div></form>    
+            </pre>
+           <pre>
+            <pre class="brush:js" > 
+        //js部分：
+                
+$(function () {
+     $("#Text1").dropDownBox({             //绑定id为Text1的input标签
+         selectType: "list",            //设置为普通下拉框
+         multiple: true,             //设置为多选
+         onSelect: function () { 
+                alert("你触发了选择事件")     //设置选择时触发的事件
+                               }  
+                });
+            })
+
+       //html部分： 
+                    
+           <form  action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">            
+            <input name="tree2"  type="text" id="Text1" data-url="/Data/listData2.js"/>
+            </div></div></form>                              
+
+            </pre>
+            </pre>  
+            
+           
+            <h3 id="default">默认值</h3>
+            
+             <table class="ttt table-hover table-bordered">
+              <thead>
+                  
+                 <td>属性名</td>
+                 <td>使用</td>
+                 <td>描述</td>
+                 <td>值类型</td>
+                 <td>默认值</td>
+              </thead>
+              <tr>
+                 <td>url</td>
+                 <td><xmp>  url:"链接地址"</xmp></td>
+                 <td>设置<b>下拉框数据链接地址</b></td>
+                 <td>string</td>
+                 <td>undefined</td>
+              </tr>
+              <tr>
+                 <td>data</td>
+                 <td><xmp>  data:[json]</xmp></td>
+                 <td>设置<b>下拉框数据内容</b></td>
+                 <td>string</td>
+                 <td>undefined</td>
+              </tr>
+
+              
+           
+
+
+            <tr>
+                 <td rowspan="2">selectType</td>
+                 <td ><xmp>  selectType: "tree"</xmp></td>
+                 <td>设置下拉框列表类型为<b>树形</b>类型</td>
+                <td rowspan="2">string</td>
+                <td rowspan="2">"tree"</td>
+            </tr>
+            <tr>                
+                 <td ><xmp>  selectType: "list"</xmp></td>
+                 <td>设置下拉框列表类型为<b>普通</b>类型</td>                
+                
+            </tr>                                            
+           <tr>
+                 <td>multiple</td>
+                 <td><xmp>  multiple:true </xmp></td>
+                 <td>设置下拉选择类型是单选还是多选</td>
+                 <td>boolean</td>
+                 <td>false(单选)</td>
+              </tr>
+           <tr>
+                 <td>onSelect</td>
+                 <td><xmp>   onSelect: function ( ) { } </xmp></td>
+                 <td>设置设置选择时触发的事件</td>
+                 <td>obj</td>
+                 <td></td>
+              </tr>
+                           
+                 </table>
+
+  
+           
+           
+           
+           <h4>例子：</h4>
+           <pre>
+               <form  action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+            <input name="tree3" type="text"  id="abc" placeholder="请选择">
+            </div></div></form> 
+            </pre>
+          <pre>
+             <pre class="brush:js" > 
+        //js部分：
+                
+$(function () {
+  $("#Text2").dropDownBox({                    
+    data: [{ id: 1, pId: 0, name: "北京" },               
+      { id: 2, pId: 0, name: "河北省", open: true, nocheck: true },
+      { id: 21, pId: 2, name: "石家庄" },  **************************************************  
+      { id: 22, pId: 2, name: "保定" },    id是元素节点序号，pId是父元素节点序号，name是元素内容
+      { id: 23, pId: 2, name: "邯郸" },            详细json的写法请参考ztree的API文件                
+      { id: 24, pId: 2, name: "承德" },    **************************************************  
+      { id: 3, pId: 0, name: "广东省", open: true, nocheck: true },
+      { id: 31, pId: 3, name: "广州" },
+      { id: 32, pId: 3, name: "深圳" },
+      { id: 33, pId: 3, name: "东莞" },
+      { id: 34, pId: 3, name: "佛山" }]                    
+                });
+            })
+
+         ******************************************************************************
+          注意：
+             data的作用是：当不使用url属性来传入外部json格式的js文件来设置下拉选择框的内容时，
+                          可以通过以上js，使用data设置下拉选择框的内容。
+         ******************************************************************************
+
+        //html部分： 
+                    
+ <form  action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+           <input name="tree3"  type="text" id="Text2"/>            
+        </div>
+    </div>
+ </form>
+            </pre>
+            </pre>   </div>
+          
+            <div><h2 id="property">属性</h2></div>
+            <div>
+                <table class="ttt table-hover table-bordered">
+              <thead>
+                 <td>属性</td>
+                 <td>描述</td>
+                 <td>值类型</td>
+                 <td>默认值</td>
+              </thead>
+              
+              <tr>
+                 <td>data-url</td>
+                 <td>设置<b>下拉框数据链接地址</b></td>
+                 <td>string</td>
+                 <td>undefined</td>
+              </tr>
+              <tr>
+                 <td>data-multiple</td>
+                 <td>设置<b>下拉框类型是多选（true）还是单选（false）</b></td>
+                 <td>boolean</td>
+                 <td>false（单选）</td>
+              </tr>
+              <tr>
+                 <td>data-selectType</td>
+                 <td>设置<b>下拉框类型是普通类型（list）还是树形类型（tree）</b></td>
+                 <td>string</td>
+                 <td>tree</td>
+              </tr>
+              <tr>
+                 <td>data-onSelect</td>
+                 <td>调用<b>选择时触发的事件</b></td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr>
+                 <td>data-readonly</td>
+                 <td>设置文本<b>可编辑性</b></td>
+                 <td>boolean</td>
+                 <td>false（不可编辑）</td>
+              </tr>
+              
+              
+              
+              
+           </table> 
+           <h4>示例：</h4>
+            
+            
+        <pre><form  action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">           
+           <input  type="text" name="tree4" class="treeBox" data-onSelect="a" data-url="/Data/treeData2.js"/>
+            </div></div></form> </pre>
+            
+            
+            <pre><pre class="brush:html" >                
+    //html部分：
+  <form  action="/Data/TestPost.ashx" role="form" class="data-form">
+      <div class="panel">
+         <div class="body">           
+           <input  type="text" name="tree4" class="treeΒox" data-onSelect="a" data-url="/Data/treeData2.js"/>
+         </div>
+      </div>
+  </form>
+
+
+    //js部分：
+                function a() { alert("你利用data-onSelect触发了选择事件") }
+            </pre></pre>
+           </div>
+            
+           
+           
+           
+     
+         
+     </div>
+    </div>
+</body>
+</html>

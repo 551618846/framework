@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title></title>
+    <!--SourceCode(../libs/)-->
+    <link href="../libs/framework/css/gluphicon.css" rel="stylesheet" />
+    <link href="../libs/asyncbox/skins/ZCMS/asyncbox.css" rel="stylesheet" />
+    <link href="../libs/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <link href="../libs/DatePicker/skin/default/datepicker.css" rel="stylesheet" />
+    <link href="../libs/framework/css/core.css" rel="stylesheet" />
+    <link href="../libs/framework/css/form.css" rel="stylesheet" />
+    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../libs/asyncbox/AsyncBox.v1.4.js"></script>
+    <script src="../libs/validate/jquery.validate.js"></script>
+    <script src="../libs/validate/jquery.validate.custom.js"></script>
+    <script src="../libs/validate/jquery.metadata.js"></script>
+    <script src="../libs/DatePicker/WdatePicker.js"></script>
+    <script src="../libs/zTree_v3/js/jquery.ztree.all-3.5.min.js"></script>
+
+    <script src="../libs/jquery/jquery.form.js"></script>
+    <script src="../libs/framework/controls/core.js"></script>
+    <script src="../libs/framework/controls/corebox.js"></script>
+    <script src="../libs/framework/controls/selectbox.js"></script>
+    <script src="../libs/framework/controls/inputbox.js"></script>
+    <script src="../libs/framework/controls/datebox.js"></script>
+    <script src="../libs/framework/controls/dropdownbox.js"></script>
+
+    <script src="../libs/framework/controls/uploadbox.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+        <div class="panel windowView">
+            <div class="head">
+                <span class="icon"></span><span class="title">基本信息</span>
+            </div>
+            <div class="body">
+                <table class="form-table">
+                    <tr>
+                        <th>
+                            录入框：
+                        </th>
+                        <td>
+                            <input id="Text4" name="input22" type="text" value="" placeholder="请选择" data-target="selectValueNew"
+                                   data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                        <th>
+                            录入框：
+                        </th>
+                        <td>
+                            <input type="text" name="input23" class="readonly" readonly="readonly" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            CheckBox：    
+                        </th>
+                        <td colspan="5">
+                            <label>
+                                <input type="checkbox" name="input33" value="1" />
+                                选项1
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input33" value="2" />
+                                选项2
+                            </label>
+                            <label>
+                                <input type="checkbox" name="input33" value="3" />
+                                选项3
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            RadioBox：
+                        </th>
+                        <td colspan="5">
+                            <label>
+                                <input type="radio" name="input34" value="1" />
+                                选项1
+                            </label>
+                            <label>
+                                <input type="radio" name="input34" value="2" />
+                                选项2
+                            </label>
+                            <label>
+                                <input type="radio" name="input34" value="3" />
+                                选项3
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            弹出选择：
+                        </th>
+                        <td>     
+                            <input id="Text5" name="input24" type="text" value="" class="selectBox" placeholder="请选择"
+                                   data-target="input18" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                        <th>
+                            录入框：
+                        </th>
+                        <td>
+                            <input type="text" name="input18" class="input" placeholder="请输入" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            日期选择：
+                        </th>
+                        <td>
+                            <input name="input41" id="date1" type="text" class="dateBox"
+                                   data-setting="{dateFmt: 'yyyy-MM-dd 12:00:00'}"
+                                   data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择">
+                        </td>
+                        <th>
+                            日期：
+                        </th>
+                        <td style="-webkit-text-size-adjust: none;">
+                            <input name="input41" id="date2" type="text" class="dateBox sm left" value="2013-03-24"
+                                   data-datefmt="yyyy-MM-dd" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择">
+                            <span class="split">至</span>
+                            <input name="input42" id="date3" type="text" class="dateBox sm left" value="2013-03-24"
+                                   data-datefmt="yyyy-MM-dd" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            树下拉单选：
+                        </th>
+                        <td>
+                            <input name="input51" id="tree1" type="text" class="treeBox" data-target="tree1Value"
+                                   data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择">
+                        </td>
+                        <th>
+                            树下拉多选：
+                        </th>
+                        <td>
+                            <input type="text" id="tree2" name="input52" class="treeBox" data-target="tree2Value"
+                                   data-url="/Data/treeData2.js" placeholder="请输入" data-multiple="true" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            树下拉单选值：
+                        </th>
+                        <td>
+                            <input id="tree1Value" type="text" name="input61" class="input" data-url="/Data/treeData2.js" />
+                        </td>
+                        <th>
+                            树下拉多选值：
+                        </th>
+                        <td>
+                            <input id="tree2Value" type="text" name="input62" class="input" data-url="/Data/treeData2.js"
+                                   readonly="readonly" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            下拉单选：
+                        </th>
+                        <td>
+                            <input name="input53" id="tree3" type="text" class="listBox" data-url="/Data/listData2.js"
+                                   data-rules="{validate:{required: true,messages:{required:'请选择'}}}" placeholder="请选择">
+                        </td>
+                        <th>
+                            下拉多选：
+                        </th>
+                        <td>
+                            <input name="input54" id="tree4" type="text" class="listBox" data-multiple="true"
+                                   data-url="/Data/listData2.js" readonly="readonly" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            普通下拉：
+                        </th>
+                        <td>
+                            <select data-rules="{validate:{required: true,messages:{required:'请选择'}}}">
+                                <option>选项1</option>
+                                <option>选项2</option>
+                                <option>选项3</option>
+                                <option>选项4</option>
+                            </select>
+                        </td>
+                        <th>
+                            组合输入：
+                        </th>
+                        <td>
+                            <div class="input-group-select">
+                                <select style="margin-right: 3px;">
+                                    <option>大于</option>
+                                    <option>小于</option>
+                                </select><input type="text" name="input27" class="input md" placeholder="请输入" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            组合输入：
+                        </th>
+                        <td>
+                            <div class="input-group-select lg">
+                                <select style="margin-right: 3px;">
+                                    <option>大于</option>
+                                    <option>小于</option>
+                                </select><input type="text" name="input27" class="input md" placeholder="请输入" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            文件上传：
+                        </th>
+                        <td colspan="3">
+                            <input id="Text5" name="input24" type="text" value="" class="uploadBox lg" placeholder=""
+                                   data-target="input18" data-url="/Data/TestUpload.ashx" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            文件上传：
+                        </th>
+                        <td colspan="3">
+                            <button type="button" class="uploadBox" data-url="/Data/TestUpload.ashx">上传文件</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="lg">
+                            长文本录入框：
+                        </th>
+                        <td colspan="3">
+                            <input class="input lg" id="Text7" name="input28" type="text" value="" placeholder="长文本"
+                                   data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="lg">
+                            长文本录入框：
+                        </th>
+                        <td colspan="3">
+                            <textarea class="input lg" name="input21" placeholder="长文本"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="button-bar">
+            <button type="submit">
+                保存</button>
+            <button type="button">
+                返回</button>
+        </div>
+    </form>
+    
+    <script>
+        $(function () {
+
+            $("#dataForm").validate({
+                meta: "validate",
+                highlight: function (element, errorClass, validClass) {
+                    if (element.type === "radio") {
+                        this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                    } else {
+                        $(element).addClass(errorClass).removeClass(validClass);
+                    }
+                },
+                showLabel: function (element, message, settings) {
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>core.js</title>
+
+        <!--<link href="../../dist/css/asyncbox.css" rel="stylesheet" />
+        <link href="../../dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="../../dist/css/bootstrap.theme.css" rel="stylesheet" />
+        
+     
+        <link href="note/note.css" rel="stylesheet" />
+        
+        <link href="note/shCoreDefault.css" rel="stylesheet" />
+
+        <script src="../../dist/js/jquery.js"></script>
+        <script src="../../dist/js/asyncbox.js"></script>
+
+        <script src="../../libs/validate/jquery.validate.js"></script>
+        <script src="../../libs/validate/jquery.validate.custom.js"></script>
+        <script src="../../libs/validate/jquery.metadata.js"></script>
+
+        <script src="../../libs/framework/controls/ajaxform.js"></script>
+        <script src="../../libs/framework/controls/selectbox.js"></script>
+        <script src="../../libs/framework/controls/openwindow.js"></script>
+        <script src="../../libs/framework/controls/searchpanel.js"></script>
+
+        <script src="note/note.js"></script>
+        <script src="note/shCore.js"></script>
+        <script src="note/shBrushJScript.js"></script>
+        <script src="note/shBrushXml.js"></script>-->
+
+    
+<!--    <link href="../../libs/framework/css/gluphicon.css" rel="stylesheet" />-->
+<!--    <link href="../../libs/asyncbox/skins/ZCMS/asyncbox.css" rel="stylesheet" />-->
+    
+    <!--<link href="../../libs/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />-->
+    <!--<link href="../../libs/DatePicker/skin/default/datepicker.css" rel="stylesheet" />
+    <link href="../../libs/framework/css/core.css" rel="stylesheet" />-->
+    <link href="../../libs/framework/css/form.css" rel="stylesheet" />
+    
+    
+
+        <link href="note/note.css" rel="stylesheet" />
+        
+        <link href="note/shCoreDefault.css" rel="stylesheet" />
+        <script src="note/shCore.js"></script>
+        <script src="note/shBrushJScript.js"></script>
+        <script src="note/shBrushXml.js"></script>
+
+    <script src="../../libs/jquery/jquery.min.js"></script>
+<!--   <script src="../../libs/asyncbox/AsyncBox.v1.4.js"></script>-->
+<!--     <script src="../../libs/validate/jquery.validate.js"></script>
+    <script src="../../libs/validate/jquery.validate.custom.js"></script>
+    <script src="../../libs/validate/jquery.metadata.js"></script>
+    <script src="../../libs/DatePicker/WdatePicker.js"></script>
+    <script src="../../libs/zTree_v3/js/jquery.ztree.all-3.5.min.js"></script>-->
+<!--    <script src="../../libs/framework/controls/corebox.js"></script>
+    <script src="../../libs/framework/controls/ajaxform.js"></script>
+    <script src="../../libs/framework/controls/selectbox.js"></script>-->
+    <script src="../../libs/framework/controls/corebox.js"></script>
+    <script src="../../libs/framework/controls/core.js"></script>
+    <script src="../../libs/framework/controls/inputbox.js"></script>
+<!--    <script src="../../libs/framework/controls/datebox.js"></script>
+    <script src="../../libs/framework/controls/dropdownbox.js"></script>-->
+
+
+        <script src="note/note.js"></script>
+
+
+        <script type="text/javascript">SyntaxHighlighter.all();</script>
+
+   
+   
+                             
+        
+</head>
+
+
+<body >
+    
+    
+    
+   <div id="div1">
+    <ul id="left" >
+        <li><a href="#summary">简介</a></li>
+        <li><a href="#use">使用方法</a></li>
+
+
+    </ul>
+    </div>
+    
+    
+    
+    
+    <div id="Main" align="right">
+    
+   
+
+
+     <div id="Content" align="left">
+      <div id="title" align="center" ><h1>core.js介绍</h1></div>
+      
+    
+      <div><h2 id="summary">简介</h2></div>
+      <div><ul>
+        <li>core.js主要包含了一些常用的自定义方法</li>
+      </ul>
+      
+        </div>
+             
+         <div><h2 id="use">使用方法</h2></div>
+
+<h4>示例：</h4>
+            
+            <pre><input type="text" id="txt1" value="请输入你要测试的字符串"/>
+   <input type='button' value="过滤所有html标签" onclick="alert($('#txt1').val().filterHTML())" />
+   <input type='button' value="获取字符串长度（一个中文两个字符）" onclick="alert($('#txt1').val().getLength())" />
+   <input type='button' value="获取数字" onclick="alert($('#txt1').val().getDateStrNumber())" />
+   <input type='button' value="判断输入的邮编(只能为六位)是否正确" onclick="alert($('#txt1').val().isZIP())" />
+   <input type='button' value="随机数字" onclick="alert(getRandNum())" />
+   <input type='button' value="格式化时间" onclick="alert(new Date().format('yyyy-MM-dd  hh:mm:ss'))" /> 
+    
+            </pre>
+        
+            
+            
+            <pre ><pre class="brush:html">                
+<input type="text" id="Text1" value="请输入你要测试的字符串"/>
+
+<input type='button' value="过滤所有html标签" onclick="alert($('#Text1').val().filterHTML())" />
+
+<input type='button' value="获取字符串长度（一个中文两个字符）" onclick="alert($('#Text1').val().getLength())" />
+
+<input type='button' value="获取数字" onclick="alert($('#Text1').val().getDateStrNumber())" />
+
+<input type='button' value="判断输入的邮编(只能为六位)是否正确" onclick="alert($('#Text1').val().isZIP())" />
+
+<input type='button' value="随机数字" onclick="alert(com_getRandNum())" />
+
+<input type='button' value="格式化日期" onclick="alert(new Date().format('yyyy-MM-dd  hh:mm:ss'))" />
+                  </pre></pre>
+         <table class="ttt table-hover table-bordered">
+              <thead>
+                  
+                 <td>对象</td>
+                 <td>方法</td>
+                 <td>描述</td>
+                 <td>返回值类型</td>
+              </thead>
+              <tr>
+                 <td rowspan="13" >String</td>
+                 
+              </tr>
+             <tr><td>filterHTML</td>
+                 <td>过滤所有html标签</td>
+                 <td>string</td></tr>
+             <tr>
+                 <td>getLength</td>
+                 <td>获取字符串长度（一个中文两个字符）</td>
+                 <td>string</td>
+              </tr>
+             <tr>
+                 <td>subString</td>
+                 <td>获取文件名</td>
+                 <td>string</td>
+              </tr>
+             <tr>
+                 <td>trim </td>
+                 <td>去除字符串左右空格</td>
+                 <td>string</td>
+              </tr>
+             <tr>
+                 <td>isEmpty</td>
+                 <td>字符串是否为空</td>
+                 <td>boolean</td>
+              </tr>
+             <tr>
+                 <td>isEmail</td>
+                 <td>是否电子邮件</td>
+                 <td>boolean</td>
+              </tr>
+             <tr>
+                 <td>getDateStrNumber</td>
+                 <td>获取数字</td>
+                 <td>string</td>
+              </tr>
+             <tr>
+                 <td>isIp</td>
+                 <td>是否IP地址</td>
+                 <td>boolean</td>
+              </tr>
+             <tr>
+                 <td>isZIP</td>
+                 <td>判断输入的邮编(只能为六位)是否正确</td>
+                 <td>boolean</td>
+              </tr>
+             <tr>
+                 <td>isIDCard</td>
+                 <td>判断输入的身份证号(15，18位)是否正确</td>
+                 <td>boolean</td>
+              </tr>
+             <tr>
+                 <td>isInteger</td>
+                 <td>是否整数</td>
+                 <td>boolean</td>
+              </tr>
+             <tr>
+                 <td>getUrlParms</td>
+                 <td>获取url参数</td>
+                 <td>string</td>
+              </tr>
+             <tr>
+                 <td>Date</td>
+                 <td>format</td>
+                 <td>格式化日期</td>
+                 <td>boolean</td>
+              </tr>
+             <tr>
+                 <td></td>
+                 <td>getRandNum()</td>
+                 <td>一万以内随机数字</td>
+                 <td>string</td>
+              </tr>
+             <tr>
+                 <td></td>
+                 <td>callFunc()</td>
+                 <td>调用方法</td>
+                 <td></td>
+              </tr>
+
+
+
+
+         </table>
+
+
+         
+          
+           
+            
+           
+           
+           
+     
+         
+     
+    </div>
+        </div>
+</body>
+</html>

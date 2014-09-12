@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>selectbox</title>
+
+
+
+    
+    <link href="../../libs/framework/css/gluphicon.css" rel="stylesheet" />
+    <link href="../../libs/asyncbox/skins/ZCMS/asyncbox.css" rel="stylesheet" />
+    <link href="../../libs/framework/css/form.css" rel="stylesheet" />
+
+        <link href="note/note.css" rel="stylesheet" />
+        
+        <link href="note/shCoreDefault.css" rel="stylesheet" />
+        <script src="note/shCore.js"></script>
+        <script src="note/shBrushJScript.js"></script>
+        <script src="note/shBrushXml.js"></script>
+
+    <script src="../../libs/jquery/jquery.min.js"></script>
+    <script src="../../libs/asyncbox/AsyncBox.v1.4.js"></script>
+
+    <script src="../../libs/framework/controls/corebox.js"></script>
+    <script src="../../libs/framework/controls/ajaxform.js"></script>
+    <script src="../../libs/framework/controls/selectbox.js"></script>
+    
+
+
+
+        <script src="note/note.js"></script>
+
+
+        <script type="text/javascript">SyntaxHighlighter.all();</script>
+       
+        
+        
+        
+        
+        <script type="text/javascript">
+        $(function () {
+                $("#aaa").selectBox({
+                    window: { width: 900,height: 300}  
+                                         });
+                  })
+				  
+				  
+				 $(function () {
+                $("#bbb").selectBox({
+
+                    
+                    window: {
+                        title:"test",
+                        width: 1200,
+                        height: 200
+                    },
+                    url:"http://www.baidu.com",
+                    
+                    select: function () {
+                        alert("123");
+
+                    },
+                    readonly: false
+                });
+            })
+        </script>
+        
+        
+        
+</head>
+
+
+<body >
+    
+    
+    
+   <div id="div1">
+    <ul id="left" >
+        <li><a href="#summary">简介</a></li>
+        <li><a href="#rely">依赖</a></li>
+        <li><a href="#contain">包含</a></li>
+        <li><a href="#use">使用方法</a></li>
+        <li><a href="#property">属性</a></li>
+
+    </ul>
+    </div>
+    
+    
+    
+    
+    <div id="Main" align="right">
+    
+    
+     <div id="Content" align="left">
+      <div id="title" align="center" ><h1>selectbox弹出选择框</h1></div>
+      
+    
+      <div><h2 id="summary">简介</h2></div>
+      <div><ul>
+        <li>实现文本框选择弹窗效果</li>
+      </ul>
+<!--      <h4>原始效果示例：</h4>
+            
+            <pre><form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+           <input id="Text5" name="input1" type="text" value="" class="selectBox" placeholder="请选择"
+                            data-target="selectValueNew" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+            </div></div></form> </pre>
+        
+            
+            
+            <pre><pre class="brush:html" >                
+  <form id="Form1" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">            
+                <input id="input1" name="input1" type="text" value="" class="selectΒox" placeholder="请选择"
+                data-target="selectValueNew" data-url="/Demo/selectList.html" 
+                data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />           
+        </div>
+    </div>
+  </form></pre></pre>-->
+        </div>
+      
+      
+         <div><h2 id="rely">依赖</h2></div>
+         <div><ul>
+           <li>jQuery</li>
+           <li>弹窗效果依赖于asyncbox.js</li>
+           <li>弹窗样色依赖于asyncbox.css</li>
+           <li>按钮的样色依赖Bootstrap的gluphion图标，详细使用方法请参考<a href="http://v3.bootcss.com/components/" target="_blank" >bootstrap官网</a></li>
+         </ul></div>
+         
+         
+         
+         <div><h2 id="contain">包含</h2></div>
+         <div><h3>&nbsp&nbsp&nbsp&nbsp  JS文件</h3>
+         <ul>
+           <li>libs/asyncbox/<b>AsyncBox.v1.4.js</b></li>
+           <li>libs/framework/controls/<b>corebox.js</b></li>
+           <li>libs/framework/controls/<b>selectbox.js</b></li>
+           
+         </ul>
+         <h3>&nbsp&nbsp&nbsp&nbsp  CSS文件</h3>
+          <ul>
+           <li>libs/framework/css/<b>gluphicon.css</b></li>
+           <li>libs/asyncbox/skins/ZCMS/<b>asyncbox.css</b></li>
+           <li>libs/framework/css/<b>form.css</b></li>
+         </ul></div>
+         
+         <div><h2 id="use">使用方法</h2></div>
+         <div><h3>&nbsp&nbsp&nbsp&nbsp  绑定方法</h3>
+
+           <ul>
+             <li>找到需要绑定的<b>input</b>标签，设置标签的<b>class="selectBox"</b>,通过以下<b>class的嵌套来绑定样色</b>。<br /><b>class嵌套：<b style="color:#f00;">data-form→panel→body→selectBox</b></b></li>
+             
+           </ul>
+            <pre><form class="data-form">           
+    <div class="panel">
+        <div class="body">
+            <input  type="text" name="input2"  class="selectBox" data-url="/Demo/selectList.html" />
+            </div></div></form> </pre>
+             <pre><pre class="brush:html">  <form class="data-form">
+    <div class="panel">
+      <div class="body">        
+          <input  type="text" name="input2"  class="selectΒox" data-url="/Demo/selectList.html" />        
+      </div>
+    </div>
+  </form></pre> </pre>
+           <ul>
+               <li><b>如需要更改seletbox的默认值<a href="#default">(点击这里查看默认值)</a></b>，则不能用通过以上class="selectBox"方法绑定，需要通过以下<b>js绑定相应id或class</b>来实现。</li>
+
+           </ul>
+           <h4>例子：设置window的height和width</h4>
+           <pre>
+               <form  action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+            <input id="aaa" name="input3"  type="text" data-url="http://www.baidu.com"  />
+            </div></div></form>    
+            </pre>
+
+            <pre>
+            <pre class="brush:js" > 
+        js部分：
+                
+                $(function () {
+                $("#x").selectBox({                 *****绑定id为x的input标签******
+                    window: { width: 900,height: 300}  
+                                         });
+                  })
+        html部分： 
+                    
+ <form  action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+           <input id="x" type="text" name="input3" data-url="http://www.baidu.com"/>            
+        </div>
+    </div>
+ </form></pre>
+            </pre>
+            
+            
+           
+            <h3 id="default">默认值</h3>
+            
+             <table class="ttt table-hover table-bordered">
+              <thead>
+                  
+                 <td>属性名</td>
+                 <td>使用</td>
+                 <td>描述</td>
+                 <td>值类型</td>
+                 <td>默认值</td>
+              </thead>
+            <tr>
+                 <td rowspan="3">window</td>
+                 <td rowspan="3">                    
+      <xmp>  window: {title:"自定义title",
+           width: 1200,
+           height: 200}</xmp></td> 
+                <td>title：设置<b>弹窗的标题</b></td>
+                  <td>string</td>
+                  <td>"选择"</td>
+            </tr>
+           <tr><td>width：设置<b>弹窗的宽度</b></td>
+               <td>number</td>
+               <td>600</td>
+           </tr>
+           <tr>
+               <td >height：设置<b>弹窗的高度</b></td>
+               <td >number</td>
+               <td >400</td>
+
+           </tr>
+              <tr>
+                 <td>url</td>
+                 <td><xmp>  url:"链接地址"</xmp></td>
+                 <td>设置<b>弹窗链接地址</b></td>
+                 <td>string</td>
+                 <td>undefined</td>
+              </tr>
+        
+           <tr>
+                 <td>select</td>
+                 <td><xmp>  select: function ( ){ } </xmp></td>
+                 <td>设置被确认选择时调用的函数</td>
+                 <td>object</td>
+                 <td></td>
+              </tr>
+           
+                 <tr>
+                <td>readonly</td>
+                <td><xmp>  readonly:true</xmp></td>
+               <td >设置文本<b>可编辑性</b></td>
+               <td >boolean</td>
+               <td >false（不可编辑）</td>
+
+           </tr>
+                 </table>
+
+  
+           
+           
+           
+           <h4>例子：</h4>
+            
+            <pre><form class="data-form">           
+    <div class="panel">
+        <div class="body">
+            <input  type="text" name="input4"  id="bbb" data-url="/Demo/selectList.html" />
+            </div></div></form>
+            </pre>
+        
+            
+
+            <pre>
+            
+           <pre class="brush:js">js部分：
+            
+            $(function () {
+                $("#input4").selectBox({          *******绑定id为input4的input标签*******   
+                    window: {                  ************设置弹窗属性************
+                        title:"test",
+                        width: 1200,
+                        height: 200
+                    },
+                    url:"http://www.baidu.com",   *******设置弹窗链接地址*******                    
+                    select: function () {
+                        alert("123");         ***设置确认选择时调用的方法*****                       
+                    },
+                    readonly: false           ****设置文本可编辑性为无****
+                });
+            })
+
+
+ html部分：
+     
+ <form class="data-form">           
+    <div class="panel">
+       <div class="body">
+         <input  type="text"  id="input4" name="input4" data-url="/Demo/selectList.html" />
+       </div>
+    </div>
+ </form></pre>
+            </pre> </div>
+          
+            <div><h2 id="property">属性</h2></div>
+            <div>
+                <table class="ttt table-hover table-bordered">
+              <thead>
+                 <td>属性</td>
+                 <td>描述</td>
+                 <td>值类型</td>
+                 <td>默认值</td>
+              </thead>
+              <tr>
+                 <td>data-url</td>
+                 <td>设置<b>弹窗链接地址</b></td>
+                 <td>string</td>
+                 <td>undefined</td>
+              </tr>
+              <tr>
+                 <td>title</td>
+                 <td>设置<b>弹窗标题</b></td>
+                 <td>string</td>
+                 <td>"选择"</td>
+              </tr>
+              <tr>
+                 <td>data-window-width</td>
+                 <td>设置<b>弹窗宽度</b></td>
+                 <td>string</td>
+                 <td>600</td>
+              </tr>
+              <tr>
+                 <td>data-window-height</td>
+                 <td>设置<b>弹窗高度</b></td>
+                 <td>string</td>
+                 <td>400</td>
+              </tr>
+              <tr>
+                 <td>readonly</td>
+                 <td>设置文本<b>可编辑性</b></td>
+                 <td>boolean</td>
+                 <td>false（不可编辑）</td>
+              </tr>
+            
+           </table> 
+           <h4>示例：</h4>
+            
+            <pre><form  class="data-form">
+    <div class="panel">
+        <div class="body">
+           <input  type="text" name="input5"  class="selectBox" placeholder="请选择"
+              title="自定义标题"  data-window-width="1000"   data-url="/Demo/selectList.html"  />
+            </div></div></form> </pre>
+        
+            
+            
+            <pre><pre class="brush:html" >                
+  <form  class="data-form">
+    <div class="panel">
+        <div class="body">
+           <input  type="text" name="input5"  class="selectΒox" placeholder="请选择"
+              title="自定义标题" data-window-width="1000" data-url="/Demo/selectList.html"  />
+        </div>
+    </div>
+  </form></pre></pre>
+           </div>
+            
+           
+           
+           
+     
+         
+     </div>
+    </div>
+</body>
+</html>

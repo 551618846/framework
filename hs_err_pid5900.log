@@ -1,0 +1,111 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+# java.lang.OutOfMemoryError: requested 83886080 bytes for GrET in C:\BUILD_AREA\jdk6_13\hotspot\src\share\vm\utilities\growableArray.cpp. Out of swap space?
+#
+#  Internal Error (allocation.inline.hpp:42), pid=5900, tid=5496
+#  Error: GrET in C:\BUILD_AREA\jdk6_13\hotspot\src\share\vm\utilities\growableArray.cpp
+#
+# Java VM: Java HotSpot(TM) Client VM (11.3-b02 mixed mode windows-x86)
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x02508400):  VMThread [stack: 0x67f90000,0x67fe0000] [id=5496]
+
+Stack: [0x67f90000,0x67fe0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+VM_Operation (0x0047fa18): GenCollectForAllocation, mode: safepoint, requested by thread 0x0025b000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x02559400 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=1392, stack(0x682f0000,0x68340000)]
+  0x02553c00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=880, stack(0x68260000,0x682b0000)]
+  0x02552800 JavaThread "Attach Listener" daemon [_thread_blocked, id=5148, stack(0x681d0000,0x68220000)]
+  0x02547c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4148, stack(0x68140000,0x68190000)]
+  0x0250dc00 JavaThread "Finalizer" daemon [_thread_blocked, id=2260, stack(0x680b0000,0x68100000)]
+  0x0250c800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5472, stack(0x68020000,0x68070000)]
+  0x0025b000 JavaThread "main" [_thread_blocked, id=5104, stack(0x00430000,0x00480000)]
+
+Other Threads:
+=>0x02508400 VMThread [stack: 0x67f90000,0x67fe0000] [id=5496]
+  0x02559c00 WatcherThread [stack: 0x68380000,0x683d0000] [id=3300]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x002593b0] UNKNOWN - owner thread: 0x02508400
+[0x00259810] UNKNOWN - owner thread: 0x0025b000
+
+Heap
+ def new generation   total 108032K, used 108032K [0x04570000, 0x0baa0000, 0x0baa0000)
+  eden space 96064K, 100% used [0x04570000, 0x0a340000, 0x0a340000)
+  from space 11968K, 100% used [0x0a340000, 0x0aef0000, 0x0aef0000)
+  to   space 11968K,   0% used [0x0aef0000, 0x0aef0000, 0x0baa0000)
+ tenured generation   total 1440576K, used 1411411K [0x0baa0000, 0x63970000, 0x63970000)
+   the space 1440576K,  97% used [0x0baa0000, 0x61cf4f80, 0x61cf5000, 0x63970000)
+ compacting perm gen  total 12288K, used 2086K [0x63970000, 0x64570000, 0x67970000)
+   the space 12288K,  16% used [0x63970000, 0x63b79840, 0x63b79a00, 0x64570000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\bin\javaw.exe
+0x77d70000 - 0x77ef0000 	C:\Windows\SysWOW64\ntdll.dll
+0x76390000 - 0x764a0000 	C:\Windows\syswow64\kernel32.dll
+0x75c50000 - 0x75c97000 	C:\Windows\syswow64\KERNELBASE.dll
+0x75d40000 - 0x75de0000 	C:\Windows\syswow64\ADVAPI32.dll
+0x765a0000 - 0x7664c000 	C:\Windows\syswow64\msvcrt.dll
+0x76170000 - 0x76189000 	C:\Windows\SysWOW64\sechost.dll
+0x75b30000 - 0x75c20000 	C:\Windows\syswow64\RPCRT4.dll
+0x758d0000 - 0x75930000 	C:\Windows\syswow64\SspiCli.dll
+0x758c0000 - 0x758cc000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x76190000 - 0x76290000 	C:\Windows\syswow64\USER32.dll
+0x76650000 - 0x766e0000 	C:\Windows\syswow64\GDI32.dll
+0x76320000 - 0x7632a000 	C:\Windows\syswow64\LPK.dll
+0x764a0000 - 0x7653d000 	C:\Windows\syswow64\USP10.dll
+0x75cb0000 - 0x75d10000 	C:\Windows\system32\IMM32.DLL
+0x77610000 - 0x776dc000 	C:\Windows\syswow64\MSCTF.dll
+0x755a0000 - 0x755d8000 	C:\Windows\SysWOW64\nvinit.dll
+0x7c340000 - 0x7c396000 	D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\msvcr71.dll
+0x6d8b0000 - 0x6db06000 	D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\client\jvm.dll
+0x74be0000 - 0x74c12000 	C:\Windows\system32\WINMM.dll
+0x71de0000 - 0x71e2b000 	C:\Windows\system32\apphelp.dll
+0x6d340000 - 0x6d348000 	D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\hpi.dll
+0x75930000 - 0x75935000 	C:\Windows\syswow64\PSAPI.DLL
+0x6d860000 - 0x6d86c000 	D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\java.dll
+0x6d8a0000 - 0x6d8af000 	D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xms128M -Xmx1524M -Dfile.encoding=GBK -Xbootclasspath/a:D:\software\MyEclipse\Common\plugins\com.genuitec.eclipse.j2eedt.core_9.0.0.me201103181703\data\libraryset\EE_5\javaee.jar;D:\software\MyEclipse\Common\plugins\com.genuitec.eclipse.j2eedt.core_9.0.0.me201103181703\data\libraryset\EE_5\jsf-impl.jar;D:\software\MyEclipse\Common\plugins\com.genuitec.eclipse.j2eedt.core_9.0.0.me201103181703\data\libraryset\EE_5\jsf-api.jar;D:\software\MyEclipse\Common\plugins\com.genuitec.eclipse.j2eedt.core_9.0.0.me201103181703\data\libraryset\EE_5\jstl-1.2.jar 
+java_command: com.huangzl.test.common.UseMemory
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013
+CLASSPATH=.;C:\Program Files (x86)\Java\jdk1.6.0_45\lib\dt.jar;C:\Program Files (x86)\Java\jdk1.6.0_45\lib\tools.jar;.;D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\lib\dt.jar;D:\software\MyEclipse\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\lib\tool.jar;
+PATH=D:/software/MyEclipse/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin/client;D:/software/MyEclipse/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin;D:/software/MyEclipse/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/lib/i386;D:\oracle11g\product\11.2.0\dbhome_2\bin;D:\oracle11g\product\11.2.0\dbhome_1\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;D:\software\TortoiseSVN\bin;D:\software\php5.2;D:\software\mysql-5.6.10-winx64\bin;D:\lib\apache-maven-3.2.1\bin
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7600 
+
+CPU:total 4 (8 cores per cpu, 2 threads per core) family 6 model 10 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, ht
+
+Memory: 4k page, physical 3758104k(790536k free), swap 4194303k(3297956k free)
+
+vm_info: Java HotSpot(TM) Client VM (11.3-b02) for windows-x86 JRE (1.6.0_13-b03), built on Mar  9 2009 01:15:24 by "java_re" with MS VC++ 7.1
+
+time: Sun Aug 17 22:36:46 2014
+elapsed time: 8 seconds
+

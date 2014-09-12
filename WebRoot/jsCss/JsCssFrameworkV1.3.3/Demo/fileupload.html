@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script>
+        function getSelected() {
+            return { Value: "值01", Text: "文本" };
+        }
+    </script>
+    <link href="../libs/framework/css/core.css" rel="stylesheet" />
+    <link href="../libs/framework/css/form.css" rel="stylesheet" />
+    <link href="../libs/framework/css/gluphicon.css" rel="stylesheet" />
+    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../libs/jquery/ajaxupload.js"></script>
+    <script src="../libs/jquery/jquery.form.min.js"></script>
+    <script src="../libs/framework/controls/corebox.js"></script>
+    <script src="../libs/framework/controls/uploadbox.js"></script>
+    <script src="../libs/framework/controls/core.js"></script>
+    <script src="../libs/jquery/ajaxupload.js"></script>
+    <link href="../libs/asyncbox/skins/ZCMS/asyncbox.css" rel="stylesheet" />
+    <script src="../libs/asyncbox/AsyncBox.v1.4.js"></script>
+    <script>
+        $(function () {
+            $("#btn").upload();
+        })
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+        <div class="panel">
+            <div class="head">
+                <span class="icon"></span><span class="title">基本信息</span>
+            </div>
+            <div class="body">
+                <input class="uploadBox lg" data-url="/Data/TestUpload.ashx" />
+                <div>
+                    <button type="button" class="uploadBox" data-url="/Data/TestUpload.ashx" >上传文件</button>
+                </div>
+            </div>
+        </div>
+        
+    </form>
+    <button id="btn">上传</button>
+</body>
+</html>

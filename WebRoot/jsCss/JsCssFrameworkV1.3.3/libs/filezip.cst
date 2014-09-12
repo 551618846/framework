@@ -1,0 +1,70 @@
+﻿<%-- 
+
+Name: js压缩
+
+Author: Sem
+
+Description: 
+
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="JavaScript"  %>
+<%@ Assembly Name="CodeSmith.CustomProperties" %>
+<%@ Import Namespace="CodeSmith.CustomProperties" %>
+<%@ Property Name="IsZip" Type="Boolean" Default="true" Description="是否压缩" %> 
+<%@ Property Name="Path" Type="String" Default="framework/"  Description="js文件路径" Optional="True" Category="Javascript文件"%>
+<%@ Property Name="Files" Type="List<string>" Default=""  Description="js文件名" Optional="True" Category="Javascript文件"%>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+<script runat="template">
+    public string RenderJavaScript(string filepath){
+        string js = string.Empty;
+        if(IsZip)
+        {
+            string[] jsline = System.IO.File.ReadAllLines(filepath);
+            foreach (string line in jsline)
+            {
+                string text = line.Trim();
+                if(filepath.EndsWith("js"))
+				{
+					string[] strlist = text.Split(' ');
+                    string returnStr = strlist[0];
+					for(int i=1;i<strlist.Length;i++){
+                        if(!string.IsNullOrWhiteSpace(strlist[i]))
+                        {
+    						if(strlist[i-1].EndsWith("var")||strlist[i-1].EndsWith("function")||strlist[i-1].EndsWith("return"))
+                            {
+                                returnStr += " "+strlist[i];   
+                            }else{
+                                returnStr += strlist[i]; 
+                            }
+                        }
+					}
+				}
+                    text = text.Replace(" ", "");
+                if(text.IndexOf("//")>=0)
+                {
+                    text = text.Remove(text.IndexOf("//"));   
+                }
+                js += text;
+            }
+        }else
+        {
+            js = System.IO.File.ReadAllText(filepath);   
+        }
+        return js;
+    }
+    public bool Exist(string filepath)
+    {
+        return File.Exists(filepath);   
+    }
+</script>
+<% foreach(string filename in Files){ %>
+<% string filepath = Path+filename; %>
+<% if(Exist(filepath)){ %>
+/*<%=filename %>*/
+<%= RenderJavaScript(filepath) %>
+<%} %>
+<%} %>
+
+
+

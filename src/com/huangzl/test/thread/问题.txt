@@ -1,0 +1,29 @@
+1,为什么需要多线程?利用多核cpu;减少客户等待时间(阻塞时可执行其他).
+2,多线程产生的问题:1互斥.
+3,多线程一个特殊应用:协作.基本模型:
+4,协作时,
+
+多线程的一个难点:线程初始的启动顺序无法确定;notify()后执行的线程无法确定;如果能遍历所有情况,即可.
+一种死锁的情况:2个生产者f0,f1,2个消费者s1,s0.假设启动顺序: f0生产后执行notify()然后wait(); -->阻塞f0,就绪s1,s0,f1
+														s1消费后notify()然后wait()[假设通知了f0]; -->阻塞s1,就绪s0,f1,f0
+														s0执行直接wait;	-->阻塞s1,s0,就绪f1,f0
+														f1执行生产后notify()然后wait();[假设通知了s1]	-->阻塞f1,s0,就绪s1,f0
+														s1消费后notify()然后wait()[假设通知了s0];-->阻塞s1,f1,就绪s0,f0
+														s0执行直接wait;-->阻塞s1,f1,s0,就绪f0
+														f0生产后notify()然后wait()[假设通知了f1];-->阻塞s1,s0,f0,就绪f1
+														f1执行直接wait;-->阻塞s1,s0,f0,f1
+														本质上是notify了错误的线程,该线程没有把notify传递给另一个线程
+first0 do first=========
+first0 wait
+second1 do second...
+second1 wait
+second0 wait
+first1 do first=========
+first1 wait
+second1 do second...
+second1 wait
+second0 wait
+first0 do first=========
+first0 wait
+first1 wait
+

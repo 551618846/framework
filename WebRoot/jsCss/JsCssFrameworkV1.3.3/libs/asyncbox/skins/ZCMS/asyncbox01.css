@@ -1,0 +1,6 @@
+.asyncbox_close{
+	        line-height:100px;cursor: pointer;border:none;margin:0;padding:0;overflow:hidden;
+	        position:absolute;top:17px !important;_top:0px !important;right:15px !important;width:14px !important;height:14px !important;
+	        background: url(images/close01_02.gif) no-repeat !important;
+         }
+      .asyncbox_close:hover{background: url(images/close01_03.gif) no-repeat !important;}

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>inputbox</title>
+
+
+        <link href="../../libs/framework/css/core.css" rel="stylesheet" />
+        <link href="../../libs/framework/css/form.css" rel="stylesheet" />
+
+        <link href="note/note.css" rel="stylesheet" />
+        
+        <link href="note/shCoreDefault.css" rel="stylesheet" />
+
+        <script src="note/shCore.js"></script>
+        <script src="note/shBrushJScript.js"></script>
+        <script src="note/shBrushXml.js"></script>
+
+        <script src="../../libs/jquery/jquery.min.js"></script>
+        <script src="../../libs/framework/controls/inputbox.js"></script>
+
+        <script src="note/note.js"></script>
+
+        <script type="text/javascript">SyntaxHighlighter.all();</script>
+                             
+        
+</head>
+
+
+<body >
+    
+    
+    
+   <div id="div1">
+    <ul id="left" >
+        <li><a href="#summary">简介</a></li>
+        <li><a href="#rely">依赖</a></li>
+        <li><a href="#contain">包含</a></li>
+        <li><a href="#use">使用方法</a></li>
+
+
+    </ul>
+    </div>
+    
+    
+    
+    
+    <div id="Main" align="right">
+    
+    
+     <div id="Content" align="left">
+      <div id="title" align="center" ><h1>inputbox文本框</h1></div>
+      
+    
+      <div><h2 id="summary">简介</h2></div>
+      <div><ul>
+        <li>实现文本框效果</li>
+      </ul>
+<!--      <h4>原始效果示例：</h4>
+            
+            <pre><form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+           <input type="text"  class="input"  />
+            </div></div></form> </pre>
+        
+            
+            
+            <pre><xmp>                
+  <form id="Form1" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+           <input type="text"  name="input1"  class="input"  />
+        </div>
+    </div>
+  </form></xmp></pre>-->
+        </div>
+      
+      
+         <div><h2 id="rely">依赖</h2></div>
+         <div><ul>
+           <li>jQuery</li>
+           <li>文本框样色依赖form.css</li>
+           <li>输入效果样色依赖core.css</li>
+         </ul></div>
+         
+         
+         
+         <div><h2 id="contain">包含</h2></div>
+         <div><h3>&nbsp&nbsp&nbsp&nbsp  JS文件</h3>
+         <ul>
+           <li>libs/framework/controls/<b>inputbox.js</b></li>           
+         </ul>
+         <h3>&nbsp&nbsp&nbsp&nbsp  CSS文件</h3>
+          <ul>
+           <li>libs/framework/css/<b>core.css</b></li>
+           <li>libs/framework/css/<b>form.css</b></li>
+         </ul></div>
+         
+         <div><h2 id="use">使用方法</h2></div>
+         <div><h3>&nbsp&nbsp&nbsp&nbsp  绑定方法</h3>
+          
+           <ul>
+             <li>找到需要绑定的<b>input</b>标签，设置标签的<b>class="input"</b>,通过以下<b>class的嵌套来绑定样色</b>。<br /><b>class嵌套：<b style="color:#f00;">data-form→panel→body→input</b></b></li>
+             
+           </ul>
+            <pre><form class="data-form">           
+    <div class="panel">
+        <div class="body">
+            <input  type="text"  class="input"  />
+            </div></div></form> </pre>
+             <pre><xmp>  <form class="data-form">
+    <div class="panel">
+      <div class="body">        
+          <input type="text" class="input" />        
+      </div>
+    </div>
+  </form></xmp> </pre>
+          
+           
+            
+           
+           
+           
+     
+         
+     </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <defaultTemplate path="filezip.cst" />
+  <defaultProperties>
+    <property name="IsZip">true</property>
+  </defaultProperties>
+  <propertySets>
+    <propertySet name="framework.js" output="..\dist\js\framework.js">
+      <property name="IsZip">False</property>
+      <property name="Path">framework/controls/</property>
+      <property name="Files">
+        ["core.js","corebox.js","ajaxform.js",
+        "inputbox.js","datebox.js","dropdownbox.js",
+        "selectbox.js","uploadbox.js","searchpanel.js","listbox.js"]
+      </property>
+    </propertySet>
+    <propertySet name="framework.sm.css" output="..\dist\css\framework.css">
+      <property name="IsZip">False</property>
+      <property name="Path">framework/css/</property>
+      <property name="Files">["core.css","form.css","gluphicon.css","searchpanel.css"]</property>
+    </propertySet>
+    <propertySet name="framework.css" output="..\dist\css\framework.sm.css">
+      <property name="IsZip">False</property>
+      <property name="Path">framework/css/</property>
+      <property name="Files">["core.css","form.sm.css","gluphicon.css","searchpanel.css"]</property>
+    </propertySet>
+    <propertySet name="validate" output="..\dist\js\jquery.validate.js">
+      <property name="IsZip">False</property>
+      <property name="Path">validate/</property>
+      <property name="Files">["jquery.validate.js","jquery.metadata.js","jquery.validate.custom.js"]</property>
+    </propertySet>
+  </propertySets>
+</codeSmith>

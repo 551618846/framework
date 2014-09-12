@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title></title>
+    <!--SourceCode(../libs/)-->
+    <link href="../libs/framework/css/gluphicon.css" rel="stylesheet" />
+    <link href="../libs/asyncbox/skins/ZCMS/asyncbox.css" rel="stylesheet" />
+    <link href="../libs/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <link href="../libs/DatePicker/skin/default/datepicker.css" rel="stylesheet" />
+    <link href="../libs/framework/css/core.css" rel="stylesheet" />
+    <link href="../libs/framework/css/form.css" rel="stylesheet" />
+    <link href="../libs/framework/css/BKSQ.css" rel="stylesheet" />
+    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../libs/asyncbox/AsyncBox.v1.4.js"></script>
+    <script src="../libs/validate/jquery.validate.js"></script>
+    <script src="../libs/validate/jquery.validate.custom.js"></script>
+    <script src="../libs/validate/jquery.metadata.js"></script>
+    <script src="../libs/DatePicker/WdatePicker.js"></script>
+    <script src="../libs/zTree_v3/js/jquery.ztree.all-3.5.min.js"></script>
+    <script src="../libs/framework/controls/core.js"></script>
+    <script src="../libs/framework/controls/corebox.js"></script>
+    <script src="../libs/framework/controls/selectbox.js"></script>
+    <script src="../libs/framework/controls/inputbox.js"></script>
+    <script src="../libs/framework/controls/datebox.js"></script>
+    <script src="../libs/framework/controls/dropdownbox.js"></script>
+</head>
+<body>
+    <form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+            <table class="form-table-bksq" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="sm">
+                            编号
+                        </th>
+                        <th class="md">
+                            管控类别
+                        </th>
+                        <th class="sm">
+                            布控请求
+                        </th>
+                        <th class="sm">
+                            布控范围
+                        </th>
+                        <th class="sm">
+                            布控期限（月）
+                        </th>
+                        <th class="lg">
+                            申请原因
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="sm">
+                            <label>
+                                <input type="checkbox" name="input33" value="1" />1
+                            </label>
+                        </th>
+                        <td class="md">
+                            <input name="input51" id="tree1" type="text" class="treeBox md" data-target="tree1Value"
+                                   data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择" />
+                        </td>
+                        <td class="sm">
+                            <input name="input51" id="tree2" type="text" class="treeBox sm" data-target="tree2Value"
+                                   data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择" />
+                        </td>
+                        <td class="sm">
+                            <input name="input51" id="tree3" type="text" class="treeBox sm" data-target="tree3Value"
+                                   data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                   placeholder="请选择" />
+                        </td>
+                        <td class="sm">
+                            3
+                        </td>
+                        <td class="lg">
+                            没有原因
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>
+                                <input type="checkbox" name="input33" value="1" />2
+                            </label>
+                        </th>
+                        <td>
+                            <input name="input51" id="Text1" type="text" class="treeBox md" data-target="tree1Value"
+                                data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                placeholder="请选择">
+                        </td>
+                        <td>
+                            <input name="input51" id="Text3" type="text"  data-target="tree1Value" class="sm"
+                                data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                placeholder="请选择">
+                        </td>
+                        <td>
+                            <input name="input51" id="Text6" type="text" class="treeBox sm" data-target="tree1Value"
+                                data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                placeholder="请选择">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>
+                                <input type="checkbox" name="input33" value="1" />3
+                            </label>
+                        </th>
+                        <td>
+                            <input name="input51" id="Text8" type="text" class="md" data-target="tree1Value"
+                                data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                placeholder="请选择">
+                        </td>
+                        <td>
+                            <input name="input51" id="Text9" type="text" class="treeBox sm" data-target="tree1Value"
+                                data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                placeholder="请选择">
+                        </td>
+                        <td>
+                            <input name="input51" id="Text10" type="text" class="treeBox sm" data-target="tree1Value"
+                                data-url="/Data/treeData2.js" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                                placeholder="请选择">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            人员类别
+                        </th>
+                        <td>
+                            <input id="Text13" name="input24" type="text" value="" class="selectBox md" placeholder="请选择"
+                                data-target="input18" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                        <td>
+                            责任1
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            短信手机号
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            人员级别
+                        </th>
+                        <td>
+                            <input id="Text2" name="input24" type="text" value="" class="selectBox md" placeholder="请选择"
+                                data-target="input18" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                        <td>
+                            责任2
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            短信手机号
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            有效性
+                        </th>
+                        <td>
+                            <input id="Text11" name="input24" type="text" value="" class="selectBox md" placeholder="请选择"
+                                data-target="input18" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                        <td>
+                            责任领导
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            短信手机号
+                        </td>
+                        <td>
+                            <input id="Text12" name="input24" type="text" value="" class="lg" placeholder="请选择"
+                                   data-target="input18" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            布控单位<br />
+                            处置措施
+                        </th>
+                        <td>
+                        </td>
+                        <td>
+                            发现单位<br />
+                            处置措施
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <input id="Text12" name="input24" type="text" value="" class="selectBox lg" placeholder="请选择"
+                                data-target="input18" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            申请人
+                        </th>
+                        <td>
+                            李警官
+                        </td>
+                        <td>
+                            申请时间
+                        </td>
+                        <td>
+                            2014-04-01<br />
+                            15:26:05
+                        </td>
+                        <td>
+                            申请单位
+                        </td>
+                        <td>
+                            **分局**派出所
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            备注
+                        </th>
+                        <td colspan="5">
+                            <textarea class="input" name="input21" placeholder="长文本"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+<script>
+    $(function () {
+        $("#dataForm").validate({
+            meta: "validate",
+            highlight: function (element, errorClass, validClass) {
+                if (element.type === "radio") {
+                    this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                } else {
+                    $(element).addClass(errorClass).removeClass(validClass);
+                }
+            },
+            showLabel: function (element, message, settings) {
+            }
+        });
+        $("input.uploadBox").selectBox({
+            button: {
+                selectIcon: "glyphicon-floppy-open",
+                selectText: "上传"
+            },
+            window: {
+                title: "文件上传",
+                width: 500,
+                height: 120
+            }
+        });
+    })
+</script>

@@ -1,0 +1,49 @@
+﻿        /*#Main { width: 1170px;}
+        #Content{ width: 1000px;}*/
+        #Main { width: 98%;}
+        #Content{ width: 84%;}
+        #title { height:70px;}
+
+
+
+
+        h2{background-color:#666666; color:#FFF;border-radius:10px;padding:10px;box-shadow: 10px 10px 5px #888888;}
+		h3{ color:#C00; font-weight:bolder;}
+		h4{ color:#F60; font-weight:bolder; line-height:30px}
+		#Content li,#left li{ font-size:16px; padding:4px;}
+		
+		b{ font-weight:900; font-size:18px; }
+        .redtype {color:#f85757}
+		/*xmp{ font-size:16px; font-weight:bolder; color:#FFF}
+		pre{ background-color:#049ff1; border-width:thick; border-color:#049ff1; color:#FFF;}*/
+		xmp{ font-size:16px; font-weight:bolder; color:#006699;font-family: "Consolas","Bitstream Vera Sans Mono","Courier New";}
+		pre,.note{ color:#666666; padding:10px; margin:0; background-color:#FFF; border:solid #e6dbdb thin; border-radius:10px;box-shadow: 5px 5px 5px #888888; margin:2px;}
+		/*.note{ color:#666666; padding:10px; margin:0; background-color:#FFF; border:solid #e6dbdb thin; border-radius:10px;box-shadow: 5px 5px 5px #888888; margin:2px;}*/
+		
+       
+      .table-bordered th, .table-bordered td {border: 2px solid #f92efb !important; padding:5px}
+      .ttt {background-color:#FFF; max-width: 100%;border-collapse:collapse;}
+      .ttt td {  font-size:16px;}
+      .ttt thead {background-color: #efa1e4;}
+   
+
+
+      .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th { background-color: rgba(65, 239, 229, 0.34);}
+		
+		
+		#div1 { position:absolute; width:12%; }
+		#left{  list-style:none; border:solid #FFF;   height:200px;  padding:0}
+		#left li{ font-size:24px; text-align:left; width:100%;background-color:#999;border:#999 solid; border-radius:10px;box-shadow: 5px 5px 5px #888888;margin:10px; }
+		#left li a{color:#FFF; text-decoration:none}
+        #left li a:hover {color:#ffcaca}
+
+            /*input.error {
+                border: 1px dotted red;
+            }
+            label.error {
+                color:red;
+            }
+            input.valid {
+                border: 1px dotted green; background-color:#00ff21;
+            }*/
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内容窗口框</title>
+<link href="Global.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="../skins/ZCMS/asyncbox.css"/>
+<script type="text/javascript" src="../../public/jquery.min.js"></script>
+<script type="text/javascript" src="../AsyncBox.v1.4.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+							   $('#alert_1').click(function(){
+									asyncbox.alert( 'Hello AsyncBox !','AsyncBox',function(){
+											asyncbox.tips('恭喜你踏出了伟大的第一步！','success')
+											});
+									});
+							   
+							   $('#open_1').click(function(){
+									asyncbox.open({
+											url : 'asyncbox.html',
+				                            width : 400,
+				                            height : 300
+											});
+									});
+							   
+　});
+</script>>
+
+
+</head>
+
+<body>
+<div class="demo_list">
+    <strong>伟大的第一步</strong>
+    <pre class="core">
+        <code>asyncbox.<span class="keyword">alert</span>(<span class="string">'Hello AsyncBox !'</span>);
+        </code>
+    </pre>
+    <div class="run"><button id="alert_1" type="button">点　我</button></div>
+    <br /><br />
+    <div class="demo_list">
+    <strong>小试牛刀</strong>
+简单 page 模式：
+<!--javascript-->
+<pre class="core">
+<code>asyncbox.<span class="keyword">open</span>({
+　　　url : <span class="string">'asyncbox.html'</span>,
+　　　width : <span class="number">400</span>,
+　　　height : <span class="number">300</span>
+　});
+</code>
+</pre>
+<!--javascript-->
+<div class="run"><button id="open_1" type="button">运　行</button></div>
+</div>
+
+</body>
+</html>

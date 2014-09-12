@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title></title>
+    <link href="../dist/css/asyncbox.css" rel="stylesheet" />
+    <link href="../dist/js/datepicker/skin/default/datepicker.css" rel="stylesheet" />
+    <link href="../dist/css/zTreeStyle.css" rel="stylesheet" />
+
+    <link href="../dist/css/framework.css" rel="stylesheet" />
+
+    <script src="../dist/js/jquery.min.js"></script>
+    <script src="../dist/js/jquery.form.min.js"></script>
+    <script src="../dist/js/asyncBox.js"></script>
+    <script src="../dist/js/datepicker/WdatePicker.js"></script>
+    <script src="../dist/js/jquery.ztree.js"></script>
+    <script src="../dist/js/jquery.validate.js"></script>
+
+    <script src="../dist/js/framework.js"></script>
+    <script>
+        $(function () {
+            $("#dataForm").validate({
+                meta: "validate",
+                highlight: function (element, errorClass, validClass) {
+                    if (element.type === "radio") {
+                        this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                    } else {
+                        $(element).addClass(errorClass).removeClass(validClass);
+                    }
+                },
+                showLabel: function (element, message, settings) {
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="head">
+            <span class="icon"></span><span class="title">基本信息</span>
+        </div>
+        <div class="body">
+            <table class="form-table">
+                <tr>
+                    <th class="required">
+                        弹出选择：
+                    </th>
+                    <td>
+                        <input id="selectBox" name="input1" type="text" value="" class="selectBox" placeholder="请选择"
+                            data-target="selectValue" data-url="/Demo/selectList.html" data-window-width="400"
+                            data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td>
+                        <input type="text" name="input2" disabled="disabled" />
+                    </td>
+                    <th class="xl">
+                        我很长很长我很长很长我很长很长长：
+                    </th>
+                    <td>
+                        <input type="text" name="input3" class="input" placeholder="请输入" data-rules="{validate:{required: true,messages:{required:'请输入'}}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        弹出选择：
+                    </th>
+                    <td>
+                        <input id="Text1" name="input4" type="text" value="" class="selectBox" placeholder="请选择"
+                            data-target="selectValue" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td>
+                        <input type="text" name="input5" class="input" placeholder="请输入" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        弹出选择：
+                    </th>
+                    <td>
+                        <input id="Text2" name="input6" type="text" value="" class="selectBox" placeholder="请选择"
+                            data-target="selectValue" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td>
+                        <input type="text" name="input7" class="input" placeholder="请输入" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="lg">
+                        长文本录入框：
+                    </th>
+                    <td colspan="3">
+                        <input class="input lg" id="Text3" name="input8" type="text" value="" placeholder="长文本" />
+                    </td>
+                    <th class="lg">
+                        长文本录入框：
+                    </th>
+                    <td>
+                        <input class="input" id=" text3" name="input9" type="text" value="" placeholder="长文本" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="lg">
+                        长文本录入框：
+                    </th>
+                    <td colspan="5">
+                        <textarea class="input xl" name="input10" type="text" value="" placeholder="长文本"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="head">
+            <span class="icon"></span><span class="title">基本信息</span>
+        </div>
+        <div class="body">
+            <table class="form-table">
+                <tr>
+                    <th>
+                        弹出选择：
+                    </th>
+                    <td>
+                        <input id="selectBox" name="input11" type="text" value="" class="selectBox" placeholder="请选择"
+                            data-target="selectValue" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                    <th class="required">
+                        录入框：
+                    </th>
+                    <td>
+                        <select name="input12">
+                            <option>选项1</option>
+                            <option>选项2</option>
+                            <option>选项3</option>
+                        </select>
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td>
+                        <select name="input13">
+                            <option>选项1</option>
+                            <option>选项2</option>
+                            <option>选项3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        弹出选择：
+                    </th>
+                    <td>
+                        <select name="input14">
+                            <option>选项1</option>
+                            <option>选项2</option>
+                            <option>选项3</option>
+                        </select>
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td >
+                        <input name="input61" id="date12" type="text" class="dateBox sm left" value="2013-03-24"
+                               data-datefmt="yyyy-MM-dd" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                               placeholder="请选择">
+                        <span class="split">至</span>
+                        <input name="input62" id="date13" type="text" class="dateBox sm left" value="2013-03-24"
+                               data-datefmt="yyyy-MM-dd" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                               placeholder="请选择">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        弹出选择：
+                    </th>
+                    <td>
+                        <input type="text" class="input" name="input17" placeholder="请输入" />
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td>
+                        <input type="text" class="input" name="input18" placeholder="请输入" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="lg">
+                        长文本录入框：
+                    </th>
+                    <td colspan="3">
+                        <input class="input lg" name="input19" type="text" value="" placeholder="长文本" />
+                    </td>
+                    <th class="xl">
+                        长文本录入框长文本录入框长文本录入框长文本录入框：
+                    </th>
+                    <td>
+                        <input class="input" name="input20" type="text" value="" placeholder="长文本" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="lg">
+                        长文本录入框：
+                    </th>
+                    <td colspan="5">
+                        <textarea class="input xl" name="input21" placeholder="长文本"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="head">
+            <span class="icon"></span><span class="title">基本信息</span>
+        </div>
+        <div class="body">
+            <table class="form-table">
+                <tr>
+                    <th>
+                        弹出选择：
+                    </th>
+                    <td>
+                        <input id="Text4" name="input22" type="text" value="" placeholder="请选择" data-target="selectValueNew"
+                            data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td>
+                        <input type="text" name="input23" class="input" placeholder="请输入" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        CheckBox：
+                    </th>
+                    <td colspan="5">
+                        <label>
+                            <input type="checkbox" name="input33" value="1" />选项1
+                        </label>
+                        <label>
+                            <input type="checkbox" name="input33" value="2" />选项2
+                        </label>
+                        <label>
+                            <input type="checkbox" name="input33" value="3" />选项3
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        RadioBox：
+                    </th>
+                    <td colspan="5">
+                        <label>
+                            <input type="radio" name="input34" value="1" />选项1
+                        </label>
+                        <label>
+                            <input type="radio" name="input34" value="2" />选项2
+                        </label>
+                        <label>
+                            <input type="radio" name="input34" value="3" />选项3
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        弹出选择：
+                    </th>
+                    <td>
+                        <input id="Text5" name="input24" type="text" value="" class="selectBox" placeholder="请选择"
+                            data-target="selectValueNew" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                    <th>
+                        日期：
+                    </th>
+                    <td >
+                        <input name="input41" id="date2" type="text" class="dateBox sm left" value="2013-03-24"
+                               data-datefmt="yyyy-MM-dd" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                               placeholder="请选择">
+                        <span class="split">至</span>
+                        <input name="input42" id="date3" type="text" class="dateBox sm left" value="2013-03-24"
+                               data-datefmt="yyyy-MM-dd" data-rules="{validate:{required: true,messages:{required:'请选择'}}}"
+                               placeholder="请选择">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        日期选择：
+                    </th>
+                    <td>
+                        <input id="Text6" name="input26" type="text" value="" placeholder="请选择" data-target="selectValueNew"
+                            data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                    <th>
+                        录入框：
+                    </th>
+                    <td>
+                        <input type="text" name="input27" class="input" placeholder="请输入" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="lg">
+                        长文本录入框：
+                    </th>
+                    <td colspan="3">
+                        <input class="input lg" id="Text7" name="input28" type="text" value="" placeholder="长文本"
+                            data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="button-bar">
+        <button type="submit">
+            保存</button>
+        <button type="button">
+            返回</button>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿[{id:1, pId:0, name:"北京"},{id:2, pId:0, name:"天津"},{id:3, pId:0, name:"上海"},
+			{id:6, pId:0, name:"重庆"},
+			{id:42, pId:0, name:"保定"},
+			{id:43, pId:0, name:"邯郸"},
+			{id:44, pId:0, name:"承德"},
+			{id:51, pId:0, name:"广州"},
+			{id:52, pId:0, name:"深圳"},
+			{id:53, pId:0, name:"东莞"},
+			{id:54, pId:0, name:"佛山"},
+			{id:61, pId:0, name:"福州"},
+			{id:62, pId:0, name:"厦门"},
+			{id:63, pId:0, name:"泉州"},
+			{id:64, pId:0, name:"三明"}]

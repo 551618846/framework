@@ -1,0 +1,535 @@
+﻿.data-form
+{
+    width: 100%;
+}
+
+/*Input,Text控件*/
+.data-form .panel .body input.xs, .data-form .panel .body textarea.xs, .data-form .panel .body select.xs
+{
+}
+
+.data-form .panel .body input.sm, .data-form .panel .body textarea.sm, .data-form .panel .body select.sm, .sm
+{
+    width: 85px;
+}
+
+.data-form .panel .body input.md, .data-form .panel .body textarea.md, .data-form .panel .body select.md, .md
+{
+    width: 210px;
+}
+
+.data-form .panel .body input.lg, .data-form .panel .body textarea.lg, .data-form .panel .body select.lg, .lg
+{
+    width: 574px;
+}
+
+.data-form .panel .body input.xl, .data-form .panel .body textarea.xl, .data-form .panel .body select.xl
+{
+    width: 938px;
+}
+
+.data-form .panel .body textarea.lg
+{
+    height: 60px;
+}
+
+.data-form .panel .body textarea.xl
+{
+    height: 100px;
+}
+
+.data-form .panel .body div.md
+{
+    width: 480px;
+}
+
+.data-form .panel .body div.lg
+{
+    width: 620px;
+}
+
+.data-form .panel .body div.xl
+{
+    width: 960px;
+}
+/*Panel*/
+.data-form .panel
+{
+    margin: 10px 76px;
+}
+.data-form div.windowView {
+    margin: 10px 0px 0px 0px;
+}
+
+.data-form .panel .head
+{
+    height: 22px;
+    line-height: 22px;
+    color: #202020;
+    font-weight: bold;
+    background: url("images/bgLine.gif") 0 11px repeat-x;
+}
+
+.data-form .panel .head .icon
+{
+    width: 7px;
+    height: 4px;
+    display: block;
+    float: left;
+    margin-top: 8px;
+    background-color: #fff;
+    background: url("images/iconHead.gif") no-repeat;
+}
+
+.data-form .panel .head .title
+{
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 3px;
+    color: #377cbd;
+}
+
+.data-form .panel .body
+{
+    padding: 10px 14px 10px 14px;
+    margin-bottom: 15px;
+}
+/*Table*/
+.table-responsive > .table
+{
+    margin-bottom: 0;
+}
+
+.form-table
+{
+    width: 720px;
+    border-spacing: 0px;
+    border-collapse: inherit;
+    table-layout: fixed;
+}
+
+.form-table tr
+{
+    height: 24px;
+    white-space: nowrap;
+}
+
+.form-table th
+{
+    font-size: 12px;
+    width: 120px;
+    text-align: right;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.form-table th.lg
+{
+    font-size: 12px;
+    text-align: right;
+    line-height: 12px;
+}
+
+.form-table th.xl
+{
+    font-size: 12px;
+    text-align: right;
+    line-height: 12px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.form-table td
+{
+    font-size: 12px;
+    padding: 1px;
+    width: 240px;
+}
+
+.form-table td span.split
+{
+    padding-left: 3px;
+    padding-right: 4px;
+    line-height: 24px;
+    float: left;
+}
+/*控件*/
+.data-form .panel .body input.readonly
+{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+    background: none;
+    border-radius: 0px;
+}
+
+.data-form .panel .body select
+{
+    width: 232px;
+    font-size: 12px;
+    height: 24px;
+    padding: 2px 6px 2px 10px;
+    line-height: 16px;
+    border-radius: 3px;
+    color: #555555;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    background-color: #f6faff;
+    cursor: pointer;
+}
+
+.data-form .panel .body input[type="checkbox"], .data-form .panel .body input[type="radio"]
+{
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+    line-height: 24px;
+    border: none;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.data-form .panel .body label
+{
+    line-height: 30px;
+    padding-right: 24px;
+    font-weight: bold;
+}
+
+.data-form .panel .body input, .data-form .panel .body input, .data-form .panel .body textarea
+{
+    width: 210px;
+    height: 16px;
+    font-size: 12px;
+    padding: 3px 10px 3px 10px;
+    line-height: 16px;
+    border-radius: 3px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    background-color: #f6faff;
+    cursor: pointer;
+}
+
+.data-form .panel .body input:focus, .data-form .panel .body select:focus, .data-form .panel .body textarea:focus
+{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+/*下拉选择*/
+.data-form .panel .body .selectPanel
+{
+    position: absolute;
+    display: none;
+    z-index: 999;
+    width: 230px;
+    height: 360px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #617775;
+    background: #f0f6e4;
+}
+
+.data-form .panel .body .selectPanel ul.ztree
+{
+    margin-top: 10px;
+}
+
+
+/*InputGroup*/
+.data-form .panel .body .input-group
+{
+    display: table;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+.data-form .panel .body .input-group input[type="text"], .data-form .panel .body .input-group input[type="password"]
+{
+    width: 180px;
+}
+
+.data-form .panel .body .input-group input[type="text"].lg, .data-form .panel .body .input-group input[type="password"].lg
+{
+    width: 514px;
+}
+
+.data-form .panel .body .input-group input[type="text"].sm, .data-form .panel .body .input-group input[type="password"].sm
+{
+    width: 65px;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+.data-form .panel .body .input-group input[type="text"].md, .data-form .panel .body .input-group input[type="password"].md
+{
+    width: 60px;
+    padding-right: 5px;
+}
+
+.input-group-btn, .data-form .panel .body .input-group input, .data-form .panel .body .input-group select
+{
+    position: relative;
+    display: table-cell;
+    border-spacing: 0px;
+}
+
+.input-group-btn
+{
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.data-form .panel .body .input-group input:first-child:not(:only-child), 
+.data-form .panel .body .input-group select:first-child, 
+.input-group-btn:first-child > .btn, 
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle)
+{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.data-form .panel .body .input-group input:last-child:not(:only-child), 
+.data-form .panel .body .input-group select:last-child, 
+.input-group-btn:last-child > div > .btn, 
+.input-group-btn:last-child > .btn, 
+.input-group-btn:last-child > .dropdown-toggle, 
+.data-form .panel .body .input-group-btn:first-child > .btn:not(:first-child)
+{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.input-group-btn
+{
+    position: relative;
+    white-space: nowrap;
+}
+
+.input-group-btn > .btn
+{
+    position: relative;
+    right: 1px;
+}
+
+.input-group-btn > .btn + .btn
+{
+    margin-left: -2px;
+}
+
+.input-group-btn > .btn:hover, .input-group-btn > .btn:active
+{
+    z-index: 2;
+}
+
+.input-group .lg .btn
+{
+    width: 60px;
+}
+
+.btn
+{
+    width: 31px;
+    height: 24px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.btn:focus
+{
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.btn:hover, .btn:focus
+{
+    color: #333333;
+    text-decoration: none;
+}
+
+.btn:active, .btn.active
+{
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-default
+{
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #cccccc;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+{
+    color: #333333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+
+.btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+{
+    background-image: none;
+}
+/*input-group-select*/
+.data-form .panel .body .input-group-select
+{
+    border-spacing: 0px;
+}
+
+.data-form .panel .body .input-group-select input
+{
+    width: 127px;
+}
+
+.data-form .panel .body .input-group-select select
+{
+    width: 80px;
+}
+
+.data-form .panel .body .input-group-select.lg
+{
+    display: table;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+.data-form .panel .body .input-group-select.lg input
+{
+    width: 431px;
+}
+
+.data-form .panel .body .input-group-select.lg select
+{
+    width: 140px;
+}
+
+/*按钮*/
+.button-bar
+{
+    height: 30px;
+    padding-left: 212px;
+    margin-top: 4px;
+}
+
+.button-bar button, .button-bar button:hover
+{
+    width: 97px;
+    height: 30px;
+    border: 0;
+    cursor: pointer; 
+    margin-right: 8px;
+    font-weight: normal;
+}
+
+.button-bar button
+{
+    background: url("images/bgFormBtn.gif") no-repeat;
+}
+
+.button-bar button:hover
+{
+    color: #fff;
+    background: url("images/bgFormBtnHover.gif") no-repeat;
+}
+/*上传框*/
+.uploadPanel
+{
+    width: 430px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: #fff;
+    border: 1px #ccc solid;
+}
+
+.uploadPanel ul
+{
+    width: 420px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    display: block;
+    clear: both;
+}
+
+.uploadPanel ul li
+{
+    width: 100%;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    list-style: none;
+    padding-left: 10px;
+    cursor: default;
+    border-bottom: 1px dotted #dfdfdf;
+    color: #999;
+    overflow: hidden;
+}
+.uploadPanel li:last-child
+{
+    border: none;
+}
+
+.uploadPanel ul li .left
+{
+    width: 360px;
+    color: #333532;
+    overflow: hidden;
+}
+.uploadPanel ul li .left span
+{
+    margin-left: 12px;
+}
+
+.uploadPanel ul li .right
+{
+    margin-right: 10px;
+    height: 22px;
+    line-height: 22px;
+    cursor: pointer;
+}
+/*CheckBox */
+.checkBoxAll
+{
+    float: right;
+    cursor: pointer;
+    margin: 5px 7px 10px 0;
+    display: block;
+    z-index: 999;
+}

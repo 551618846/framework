@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ajaxform</title>
+        
+
+    <link href="../../libs/asyncbox/skins/ZCMS/asyncbox.css" rel="stylesheet" />
+    <link href="../../libs/framework/css/core.css" rel="stylesheet" />
+
+        <link href="note/note.css" rel="stylesheet" />        
+        <link href="note/shCoreDefault.css" rel="stylesheet" />
+
+    <script src="../../libs/jquery/jquery.min.js"></script>
+    <script src="../../libs/asyncbox/AsyncBox.v1.4.js"></script>
+    <script src="../../libs/validate/jquery.validate.js"></script>
+    <script src="../../libs/validate/jquery.validate.custom.js"></script>
+    <script src="../../libs/validate/jquery.metadata.js"></script>
+
+    <script src="../../libs/framework/controls/ajaxform.js"></script>
+
+        <script src="note/note.js"></script>
+        <script src="note/shCore.js"></script>
+        <script src="note/shBrushJScript.js"></script>
+        <script src="note/shBrushXml.js"></script>
+
+        
+
+
+
+
+
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+
+
+       
+
+    <script type="text/javascript">
+        jQuery.extend(jQuery.validator.messages, {
+            required: "必选字段",
+            remote: "请修正该字段",
+            email: "请输入正确格式的电子邮件",
+            url: "请输入合法的网址",
+            date: "请输入合法的日期",
+            dateISO: "请输入合法的日期 (ISO).",
+            number: "请输入合法的数字",
+            digits: "只能输入整数",
+            creditcard: "请输入合法的信用卡号",
+            equalTo: "请再次输入相同的值",
+            accept: "请输入拥有合法后缀名的字符串",
+            maxlength: jQuery.validator.format("请输入一个长度最多是 {0} 的字符串"),
+            minlength: jQuery.validator.format("请输入一个长度最少是 {0} 的字符串"),
+            rangelength: jQuery.validator.format("请输入一个长度介于 {0} 和 {1} 之间的字符串"),
+            range: jQuery.validator.format("请输入一个介于 {0} 和 {1} 之间的值"),
+            max: jQuery.validator.format("请输入一个最大为 {0} 的值"),
+            min: jQuery.validator.format("请输入一个最小为 {0} 的值")
+        });
+
+
+
+        $(function () { $("#dataForm").ajaxForm() });
+
+ $(function () {
+            $(".form1").ajaxForm({
+                success: function () {
+                    alert("OK!!")
+                }
+            });
+        })
+
+        $(function () { $(".form2").ajaxForm() });
+
+
+        $(function () {
+            $(".form3").ajaxForm(
+                {
+                    init: function ($form) {
+                        $form.validate({
+                            meta: "validate",
+                            highlight: function (element, errorClass, validClass) {
+                                if (element.type === "radio") {
+                                    this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                                } else {
+                                    $(element).addClass(errorClass).removeClass(validClass);
+                                }
+                            },
+                            showLabel: function (element, message, settings) {
+                                var $element = $(element);
+                                var label = $(settings.errorElement + "[for='" + element.id + "']");
+                                if (label.length) {
+                                    label.removeClass(settings.validClass).addClass(settings.errorClass);
+                                    label.html(message);
+
+                                    label = $("<" + settings.errorElement + ">")
+                                        .attr("for", element.id)
+                                        .addClass(settings.errorClass)
+                                        .html(message || "");
+                                    if ($element.parent().hasClass("input-group")) {
+                                        $element.parent().after(label);
+                                    } else {
+                                        $element.after(label);
+                                    }
+                                } else {
+                                    label = $("<" + settings.errorElement + ">")
+                                        .attr("for", element.id)
+                                        .addClass(settings.errorClass)
+                                        .html(message || "");
+                                    if ($element.parent().hasClass("input-group")) {
+                                        $element.parent().after(label);
+                                    } else {
+                                        $element.after(label);
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    
+                }
+
+                )
+        });
+
+
+        $(function () {
+            $(".form4").ajaxForm(
+                {
+                    init: function ($form) {
+                        $form.validate({
+                            meta: "validate",
+                            highlight: function (element, errorClass, validClass) {
+                                if (element.type === "radio") {
+                                    this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                                } else {
+                                    $(element).addClass(errorClass).removeClass(validClass);
+                                }
+                            },
+                            showLabel: function (element, message, settings) {
+                                var $element = $(element);
+                                var label = $(settings.errorElement + "[for='" + element.id + "']");
+                                if (label.length) {
+                                    label.removeClass(settings.validClass).addClass(settings.errorClass);
+                                    label.html(message);
+
+                                    label = $("<" + settings.errorElement + ">")
+                                        .attr("for", element.id)
+                                        .addClass(settings.errorClass)
+                                        .html(message || "");
+                                    if ($element.parent().hasClass("input-group")) {
+                                        $element.parent().after(label);
+                                    } else {
+                                        $element.after(label);
+                                    }
+                                } else {
+                                    label = $("<" + settings.errorElement + ">")
+                                        .attr("for", element.id)
+                                        .addClass(settings.errorClass)
+                                        .html(message || "");
+                                    if ($element.parent().hasClass("input-group")) {
+                                        $element.parent().after(label);
+                                    } else {
+                                        $element.after(label);
+                                    }
+                                }
+                            }
+                        });
+                    }
+
+                }
+
+                )
+        });
+
+       
+    </script>
+    <style>
+        input.error {
+border: 1px dotted red;
+}
+label.error {
+color:red;
+}
+input.valid {
+border: 1px dotted green; background-color:#00ff21;
+} 
+    </style>
+
+   
+</head>
+<body>
+    <div id="div1">
+    <ul id="left" >
+        <li><a href="#summary">简介</a></li>
+        <li><a href="#rely">依赖</a></li>
+        <li><a href="#contain">包含</a></li>
+        <li><a href="#use">使用方法</a></li>
+        <li><a href="#property">验证方法</a></li>
+
+    </ul>
+    </div>
+
+
+    
+    <div id="Main"  align="right">
+    
+    
+     <div id="Content" align="left">
+      <div id="title" align="center" ><h1>ajaxform</h1></div>
+      
+    
+      <div><h2 id="summary">简介</h2></div>
+
+      <div >
+
+     <h4>原始效果示例：</h4>
+            
+            <pre >             <form id="dataForm" action="../../Data/TestPost.ashx" role="form">
+                   <button type="submit" >提交</button>
+                   </form></pre>
+       
+     <!--        <pre><pre class="brush: html"  >html部分：
+          <form id="Form" action="../../Data/TestPost.ashx" role="form">                       
+              <button type="submit" >提交</button>
+          </form>
+                </pre><pre class="brush:js">js部分：
+             $(function () { $("#Form").ajaxForm() })
+            </pre></pre>-->
+            
+          </div>
+
+         
+      <div><h2 id="rely">依赖</h2></div>
+         <div>
+         <ul>
+           <li>jQuery</li>
+           <li>验证效果与样色依赖于validate</li>
+           <li>操作响应弹窗样色依赖于asyncbox</li>
+         </ul>
+          </div>
+         
+         <div> <h2 id="contain">包含</h2></div>
+         <div>
+         <h3>&nbsp&nbsp&nbsp&nbsp  JS文件</h3>
+         <ul>
+           <li>libs/asyncbox/<b>AsyncBox.v1.4.js</b></li>
+           <li>libs/validate/<b>jquery.validate.js</b></li>
+           <li>libs/validate/<b>jquery.validate.custom.js</b></li>
+           <li>libs/validate/<b>jquery.metadata.js</b></li>
+           <li>libs/framework/controls/<b>ajaxform.js</b></li>  
+         </ul>
+         <h3>&nbsp&nbsp&nbsp&nbsp  CSS文件</h3>
+          <ul>
+           <li>libs/asyncbox/skins/ZCMS/<b>asyncbox.css</b></li>
+           <li>libs/framework/css/<b>core.css</b></li>
+
+         </ul></div>
+      
+        <div><h2 id="use">使用方法</h2></div>
+        <div><h3>&nbsp&nbsp&nbsp&nbsp  绑定方法</h3>
+           <ul>
+             <li>通过以下<b>js绑定相应id或class名称的form标签</b>。</li>
+             
+           </ul>
+           <h4>代码：</h4>
+            <pre> <pre class="brush: js">
+          js部分：       
+                $(function ( ) { $("#dataForm").ajaxForm(  ) } )    ******绑定id为dataForm的form标签******
+            </pre></pre>
+           
+           <ul>
+               <li><b>如需要更改ajaxform的默认方法<a href="#default">(点击这里查看默认方法)</a></b>，需要通过以下<b>js绑定相应id或class</b>来实现。</li>
+
+           </ul>
+           <h4>例子：设置操作成功响应success的方法</h4>
+           <pre>
+                <form  class="form1"  action="../../Data/TestPost.ashx" role="form">
+                   <button type="submit" >提交</button>
+                   </form>
+            </pre>
+        
+            <pre><pre class="brush: js">js部分：               
+        $(function () {
+            $(".form1").ajaxForm({
+              success: function () {  alert("OK!!") }   **********自定义操作响应成功方法**********
+                                 });
+                       })</pre>
+                <pre class="brush: html"">
+           html部分：
+                <form  class="form1"  action="../../Data/TestPost.ashx" role="form">
+                   <button type="submit" >提交</button>
+                </form></pre>
+            </pre>
+            
+            
+           
+            <h3 id="default">默认方法</h3>
+            <table class="ttt table-hover table-bordered ">
+              <thead>
+              <tr>
+                 <td>属性名</td>
+                 <td>描述</td>
+                 <td>使用</td>
+              </tr>                 
+              </thead>
+              
+              <tr>
+                 <td>
+                     before
+                 </td>
+                 <td>
+                     提交前执行方法   
+                 </td>
+                 <td>                    
+                      <xmp>  before: function () { 自定义提交前执行方法 } </xmp>
+                 </td>                                                   
+              </tr>
+
+              <tr>
+                 <td>validate</td>
+                 <td>
+                   验证方法  
+                 </td>
+                 <td>                    
+      <xmp>  validate: function () { 自定义验证方法 } </xmp>
+                 </td>                                       
+              </tr>
+
+              <tr>
+                 <td>success</td>
+                  <td>
+                   操作成功响应方法 
+                 </td>
+                 <td>
+      <xmp>  success: function () { 自定义操作成功响应方法 }</xmp>
+                   
+                 </td>
+                 
+                  
+                 
+                
+              </tr>
+
+              <tr>
+                 <td>fail</td>
+                  <td>
+                   操作失败响应方法 
+                 </td>
+                 <td>
+      <xmp>  fail: function () { 自定义操作失败响应方法 }</xmp>
+                   
+                 </td>                 
+       
+                
+              </tr>
+
+
+              <tr>
+                 <td>error</td>
+                  <td>
+                   操作传输异常响应方法 
+                 </td>
+                 <td>
+      <xmp>  error: function () { 自定义操作传输异常响应方法 }</xmp>
+                   
+                 </td>         
+    
+                
+              </tr>
+              
+                         
+           </table> </div>
+          
+           
+           
+           
+          
+            
+            
+           
+            
+            <div><h2 id="property">相关验证方法的使用</h2></div>
+         <div><h4>*******注意：以下介绍的相关示例中，为了方便看出效果，验证样色和文字验证提示（默认无文字验证提示）经过修改******</h4>
+             <h3>&nbsp&nbsp&nbsp&nbsp 验证方法的绑定</h3>
+           <ul>
+             <li>通过设置<b>input标签中的data-rules属性</b>。</li>
+             
+           </ul>
+
+         <h4>示例：</h4>
+         <pre>             
+             <form class="form2"  action="../../Data/TestPost.ashx" role="form">
+                <label>手机</label><input data-rules="{validate:{ mobile:true,required:true}}" />                
+                <button type="submit" >提交</button>
+        </form></pre>
+        
+            
+            
+            <pre>
+                <pre class="brush: html">
+       html部分：
+<form class="form2"  action="../../Data/TestPost.ashx" role="form">
+   <label>手机</label>
+   <input data-rules="{validate:{ mobile:true,required:true}}" />
+                                      ****验证手机号码与不为空****              
+   <button type="submit" >提交</button>
+</form></pre>
+           <pre class="brush: js">
+     js部分：
+            $(function () { $(".form2").ajaxForm() });</pre></pre>
+
+         <h4>validate.js中的验证方法和jquery.validate.custom.js中的验证方法可混合使用：</h4>
+
+        
+         <pre>             
+           <form class="form3"  action="../../Data/TestPost.ashx" role="form">
+                <label>两位以上英文</label><input data-rules="{validate:{ myEnglish:true,minlength:2,required:true,messages:{myEnglish:'两位以上英文！',minlength:'长度为两位以上！'}}}" />           
+                <button type="submit" >提交</button>
+        </form></pre>
+        
+            
+            
+            <pre>
+                <pre class="brush: html">
+html部分：
+  <form class="form3"  action="../../Data/TestPost.ashx" role="form">
+    <label>两位以上英文</label>
+    <input data-rules="{validate:{   
+                           myEnglish:true,      ***myEnglish是jquery.validate.custom.js中的验证方法**
+                           minlength:2,         ******minlength是validate.js中的验证方法*****
+                           required:true,       ******required是validate.js中的验证方法******
+
+                           messages:{ myEnglish:'两位以上英文！',    *****通过messages修改验证提示*****
+                                      minlength:'长度为两位以上！'}}}" />           
+    <button type="submit" >提交</button>
+       
+  </form></pre>              
+<pre class="brush: js">
+    js部分：
+            $(function () { $(".form3").ajaxForm() });</pre></pre>
+         <h3>&nbsp&nbsp&nbsp&nbsp validate.js中的常用的验证方法,请参考网络的中文API<a href="http://banu.blog.163.com/blog/static/23146482009111941249376/" target="_blank">（点击这里）</a></h3>
+         <h3>&nbsp&nbsp&nbsp&nbsp jquery.validate.custom.js中的验证方法</h3>
+         
+
+
+            
+           <!--<table class="shuxing">-->
+             <table class="ttt table-hover table-bordered">
+              <thead>
+                 <td>属性</td>
+                 <td>描述</td>
+                 <td>值类型</td>
+                 <td>jason中的使用方法</td>
+                 <td>默认验证提示</td>
+              </thead>
+              <tr>
+                 <td>myEmail</td>
+                 <td>邮箱地址验证</td>
+                 <td>boolean</td>
+                 <td>myEmail:true</td>
+                 <td>请输入正确的邮箱地址</td>
+              </tr>
+              <tr>
+                 <td>mobile</td>
+                 <td>手机号码验证</td>
+                 <td>boolean</td>
+                 <td>mobile:true</td>
+                  <td>请输入正确的手机号码</td>
+              </tr>
+              <tr>
+                 <td>htmlText</td>
+                 <td>验证HTML格式</td>
+                 <td>boolean</td>
+                 <td>htmlText:true</td>
+                  <td>只能输入：字母、数字、下划线,长度在4~20位字符之间</td>
+              </tr>
+               <tr>
+                 <td>htmlEnCn</td>
+                 <td>验证只能输入中英文</td>
+                 <td>boolean</td>
+                 <td>htmlEnCn:true</td>
+                   <td>输入了非法字符</td>
+              </tr>
+               <tr>
+                 <td>myEnglish</td>
+                 <td>验证只能输入英文</td>
+                 <td>boolean</td>
+                 <td>myEnglish:true</td>
+                   <td>请输入英文</td>
+              </tr>
+               <tr>
+                 <td>myZipCode</td>
+                 <td>验证邮政编码的格式</td>
+                 <td>boolean</td>
+                 <td>myZipCode:true</td>
+                   <td>请输入正确的邮政编码</td>
+              </tr>
+               <tr>
+                 <td>myQQ</td>
+                 <td>验证验证QQ是否正确</td>
+                 <td>boolean</td>
+                 <td>myQQ:true</td>
+                   <td>QQ输入有误，请重新输入</td>
+              </tr>
+               <tr>
+                 <td>myIdCard</td>
+                 <td>验证身份证是否正确</td>
+                 <td>boolean</td>
+                 <td>myIdCard:true</td>
+                   <td>身份证输入有误，请重新输入</td>
+              </tr>
+              <tr>
+                 <td>myHomePhone</td>
+                 <td>验证电话号码是否正确</td>
+                 <td>boolean</td>
+                 <td>myHomePhone:true</td>
+                  <td>请输入正确的电话号码</td>
+              </tr>
+               <tr>
+                 <td>myHeight</td>
+                 <td>验证身高是否正确</td>
+                 <td>boolean</td>
+                 <td>myHeight:true</td>
+                   <td>请输入正确的身高</td>
+              </tr>
+               
+               <tr>
+                 <td>ajaxEmail</td>
+                 <td>异步验证邮箱是否存在</td>
+                 <td>boolean</td>
+                 <td>ajaxEmail:true</td>
+                   <td>邮箱地址已存在，请重新输入</td>
+              </tr>
+               <tr>
+                 <td>compareAge</td>
+                 <td>验证年龄</td>
+                 <td>boolean</td>
+                 <td>compareAge:true</td>
+                   <td>结束年龄必须大于开始年龄</td>
+              </tr>
+               <tr>
+                 <td>compareDate</td>
+                 <td>验证日期</td>
+                 <td>boolean</td>
+                 <td>compareDate:true</td>
+                   <td>结束日期必须大于开始日期</td>
+              </tr>
+              
+           
+              
+           </table> 
+           
+            <h4>例子</h4>
+            
+            <pre>             
+           <form class="form4"  action="../../Data/TestPost.ashx" role="form">
+                <label>验证邮箱格式</label><input id="a" data-rules="{validate:{ myEmail:true,required:true}}" />
+               
+                <label>验证邮箱格式（修改验证提示）</label><input id="b" data-rules="{validate:{ myEmail:true,required:true,messages:{myEmail:'邮箱错了！！'}}}" />               
+                <button type="submit" >提交</button>
+        </form></pre>
+        
+            
+            
+            <pre>
+                <pre class="brush: html">html部分：
+     <form class="form4"  action="../../Data/TestPost.ashx" role="form">
+
+         <label>验证邮箱格式</label>
+         <input data-rules="{validate:{ myEmail:true,               ******验证邮箱格式*****
+                                         required:true}}" />        ******验证不能为空*****
+
+
+         <label>验证邮箱格式（修改验证提示）</label>
+         <input data-rules="{validate:{ myEmail:true,
+                                         required:true,
+                                         messages:{myEmail:'邮箱错了！！'}}}" />     
+                                                                *****修改验证提示*****            
+         <button type="submit" >提交</button>
+     </form></pre>
+                </pre>
+ 
+           
+   
+           
+           
+           
+           
+           
+           
+                
+        
+         
+     </div>
+    
+</body>
+</html>

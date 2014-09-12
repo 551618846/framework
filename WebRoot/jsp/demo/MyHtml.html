@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    
+    <script type="text/javascript" src="/jsCss/Revenco.JsCss/dist/js/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    var simple = "str";
+    simple.age = "10";
+    //alert(simple.age);//基本类型不能加属性:被封装为对应的引用类型,但立即销毁,导致属性也销毁
+    
+    var str = new String("str");
+    str.age = "10";//给引用类型加属性ok
+    //alert(str.age);//ok
+    
+    var Person = function(name){//var定义一个变量Person,其右值为一个函数对象(Function对象)
+    	var pri = "huangzl";//内部属性,外部无法访问
+    	this.name = name;
+    };
+    
+    //alert(Person.pri);//内部属性,外部无法访问
+    
+    Person.age = "10";//给引用类型加属性ok
+    //alert(Person.age);//ok
+    
+    
+    
+    
+    //函数3种调用方法:1直接调用.2new调用.3call调用
+    Person("per");
+    //alert(window.name);//per
+    
+    var obj = new Person("test");//见6.22:new执行4个步骤:1创建一个新函数对象(包含[[prototype]]属性).2将构造函数作用域赋个对象(this指向这个对象).3执行构造函数代码.4返回对象.
+    //alert(obj.name);//test
+    
+    var cl = new Object();
+    Person.call(cl, "call");//在cl对象上调用
+    //alert(cl.name);//call
+    
+    
+    
+    
+    
+    //每个函数对象都有prototype属性//prototype对象默认只有constructor属性和从Object继承的
+    //alert(Person.prototype);//ok
+    
+    //每个实例对象都有[[prototype]]属性,指向函数对象的prototype原型对象.但是代码一般不能访问[[prototype]],部分浏览器可以__proto__
+    var p1 = new Person("p1");
+    //alert(p1.__proto__);//ok
+    
+  	//访问(实例)对象的属性时,会按原型链搜索
+  	Person.prototype.newName = "newName";//修改原型
+    var p2 = new Person("p2");
+    //alert(p2.newName);//newName
+    
+    Person.prototype.say = function(){
+    	alert(this.newName);//this变量,引用类型,指向代码执行环境的变量对象:执行环境分全局和函数.变量对象包含该执行环境中定义的变量和函数
+    }
+    //p2.say();//ok
+    
+    
+    var list = new Array();
+    var Teacher = function(name){//按名称限制唯一性
+    	var t = list[name];
+    	if(t == undefined){
+    		this.init(name);
+    		list[name] = this;//把list当做Object使用
+    		t = this;
+    	}
+    	return t;//覆盖new时默认返回的对象.(如果不return,那么用new创建的对象时默认返回新建的对象)
+    };
+    
+    Teacher.prototype.init = function(name){
+    	this.name = name;
+    	this.say = function(){
+    		alert(this.name);
+    	};
+    };
+    
+    var t = new Teacher("huangzl");
+    
+    var t2 = new Teacher("huangzl");
+    //alert(t === t2);//true
+    
+    
+    
+    
+    
+    var Student = function(name){
+    	this.name = name;
+    	this.say = function(){alert(this.name);};
+    	return this;//不加return默认也是返回this
+    };
+    var s1 = new Student("huangzl");
+    //s1.say();
+    
+    
+    
+    
+    
+    /*********************/
+    var Son = function(name){
+    	this.name = name;
+		if(!this.hasInit){
+			alert("init");
+			Son.prototype = new Student("huangzk");//错误的继承:第一次创建的实例的原型对象仍是旧的
+			Son.prototype.hasInit = true;
+		}
+        
+    };
+    var son = new Son("hzl");
+    //son.say();//异常//错误的继承:第一次创建的实例的原型对象仍是旧的
+    var son2 = new Son("zz");
+    //son2.say();//ok
+    
+    
+    
+    
+    /*******this理解为一个引用类型,指向一个对象,这个对象包含:this这个语句运行时所在的执行环境中定义的属性和方法;而this的执行环境有全局,函数,对象****************/
+    var global = "global";
+    alert(this.global);//全局环境下this相当于window
+    alert(this === window);
+    
+    var name = "window";
+    function this_(){
+    	alert(this.name);
+    }
+    this_();////在全局环境运行
+    
+    var obj = new Object();
+    obj.name = "obj";
+    obj.fn = this_;
+    obj.fn();//"obj"//在对象上运行
+    
+    
+    </script>
+
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+  </body>
+</html>

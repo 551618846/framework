@@ -1,0 +1,177 @@
+﻿.searchPanel, .data-form .searchPanel
+{
+    padding: 0px;
+    width: 99%;
+    font-size: 13px;
+    cursor: default;
+    margin: 10px 5px 0px 10px;
+}
+.data-form .searchPanel .body
+{
+    min-width: 840px;
+    padding: 14px 0px 20px 0px;
+}
+/*listBox*/
+dl.listBox
+{
+    margin: 0px;
+    font-size: 13px;
+    color: #004473;
+    line-height: 20px;
+}
+
+dl.listBox:first-child
+{
+    padding-top: 3px;
+}
+
+dl.listBox dd
+{
+    width: 60px;
+    padding: 2px 5px 2px 3px;
+    text-align: left;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+    margin: 2px 2px 0px 0px;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+dl.listBox dd.lg, .searchPanel dl.listBox dd.lg
+{
+    width: 130px;
+}
+
+dl.listBox dd.xl, .searchPanel dl.listBox dd.xl
+{
+    width: 200px;
+}
+
+dl.listBox dd.more
+{
+    font-weight: bold;
+}
+
+dl.listBox dd.selected
+{
+    color: white;
+    background-color: #bbb;
+}
+/*SearchPanel Base*/
+.searchPanel .searchBox
+{
+    height: 23px;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+.searchPanel .displayBox
+{
+    text-align: center;
+    min-width: 840px;
+    padding: 0px 10px 0px 10px;
+    border-top: 1px dotted #ccc;
+}
+.searchPanel .displayBox button
+{
+    width: 70px;
+    height: 14px;
+    border: none;
+    background-color: white;
+    display: block;
+    cursor: pointer;
+    margin: 0px auto;
+}
+.searchPanel .button-bar
+{
+    width: 98%;
+    min-width: 840px;
+    text-align: right;
+    margin-top: 4px;
+    margin-left: 0px;
+    padding: 0px;
+    margin-right: 40px;
+}
+
+.searchPanel .baseInfo
+{
+    display: block;
+}
+.searchPanel .extInfo
+{
+    display: none;
+}
+/*tabel*/
+.searchPanel .form-table
+{
+    table-layout: auto; 
+    margin-left: 0;
+    background-color:#eee;
+}
+.searchPanel .form-table th
+{
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    vertical-align: top;
+    padding-top: 6px;
+    line-height: 20px;
+    font-weight: normal;
+}
+.searchPanel .form-table td
+{
+    width: 190px;
+    min-width: 190px;
+    max-width: 190px;
+    text-align: left;
+}
+.data-form .searchPanel .body input, .data-form .searchPanel .body textarea
+{
+    width: 160px;
+}
+.data-form .searchPanel .body input.lg, .data-form .searchPanel .body textarea.lg {
+    width: 434px;
+}
+.data-form .searchPanel .body input.xl, .data-form .searchPanel .body textarea.xl {
+    width: 708px;
+}
+.data-form .searchPanel .body select
+{
+    width: 182px;
+}
+.data-form .searchPanel .body .input-group input[type="text"]
+{
+    width: 130px;
+}
+.data-form .searchPanel .body .input-group input[type="text"].lg
+{
+    width: 434px;
+}
+.data-form .searchPanel .body .input-group input[type='text'].sm
+{
+    width: 70px;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+.data-form .searchPanel .body .split
+{
+    text-align: center;
+    display: block;
+}
+/*input-group-select*/
+.data-form .panel .body .input-group-select input .data-form .searchPanel .body td[colspan="3"] .input-group-select
+{
+    width: 460px;
+}
+.data-form .searchPanel .body td[colspan="3"] .input-group-select input
+{
+    width: 351px;
+}
+.data-form .searchPanel .body td[colspan="5"] .input-group-select
+{
+    width: 730px;
+}
+.data-form .searchPanel .body td[colspan="5"] .input-group-select input
+{
+    width: 565px;
+}

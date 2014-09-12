@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>NoteDemo</title>
+        
+        
+        
+        <link href="../../dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="note/note.css" rel="stylesheet" />
+    
+        
+        
+        <link href="note/shCoreDefault.css" rel="stylesheet" />
+
+        <script src="../../dist/js/jquery.js"></script>
+
+        <script src="note/note.js"></script>
+        <script src="note/shCore.js"></script>
+        <script src="note/shBrushJScript.js"></script>
+        <script src="note/shBrushXml.js"></script>
+
+
+
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+
+  
+
+   
+</head>
+<body>
+    <div id="div1">
+    <ul id="left" >
+        <li><a href="#summary">简介</a></li>
+        <li><a href="#rely">依赖</a></li>
+        <li><a href="#contain">包含</a></li>
+        <li><a href="#use">使用方法</a></li>
+        <li><a href="#property">验证方法</a></li>
+
+    </ul>
+    </div>
+
+
+    
+    <div id="Main"  align="right">
+    
+    
+     <div id="Content" align="left">
+      <div id="title" align="center" ><h1>notedemo</h1></div>
+      
+    
+      <div><h2 id="summary">简介</h2></div>
+
+      <div >
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <h4>原始效果示例：</h4>
+            
+            <pre >             </pre>
+           
+          
+        
+            
+            <pre><pre class="brush: html"  >html部分：
+                   
+                </pre>
+                <pre class="brush:js">js部分：
+                   
+            </pre></pre>
+            
+          </div>
+
+         
+      <div><h2 id="rely">依赖</h2></div>
+         <div>
+         <ul>
+           <li></li>
+           <li></li>
+           <li></li>
+         </ul>
+          </div>
+         
+         <div> <h2 id="contain">包含</h2></div>
+         <div>
+         <h3>&nbsp&nbsp&nbsp&nbsp  JS文件</h3>
+         <ul>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+             
+         </ul>
+         <h3>&nbsp&nbsp&nbsp&nbsp  CSS文件</h3>
+          <ul>
+           <li></li>
+
+         </ul></div>
+      
+        <div><h2 id="use">使用方法</h2></div>
+        <div><h3>&nbsp&nbsp&nbsp&nbsp  绑定方法</h3>
+           <ul>
+             <li>通过以下<b>js绑定相应id或class名称的form标签</b>。</li>
+             
+           </ul>
+           <h4>代码：</h4>
+            <pre> <pre class="brush: js">
+          js部分：       
+                
+            </pre></pre>
+           
+           
+           <h4>例子：</h4>
+           <pre>
+               
+            </pre>
+        
+            <pre><pre class="brush: js">js部分：               
+        </pre>
+                <pre class="brush: html"">
+           html部分：
+                </pre>
+            </pre>
+            
+            
+           
+            <h3 id="default">默认方法</h3>
+             <table class="shuxing">
+              <thead>
+                  
+                 <td>属性名</td>
+                 <td>描述</td>
+                 <td>使用</td>                
+                 <td>默认方法</td>
+              </thead>
+              
+              <tr>
+                 <td>before</td>
+                  <td>
+                  提交前执行方法   
+                 </td>
+                 <td>
+                    
+      <xmp>  before: function () { 自定义提交前执行方法 } </xmp>
+                 </td>                 
+                 <td>请参考ajaxform.js文件</td>
+                 
+              </tr>
+
+              <tr>
+                 <td>validate</td>
+                 <td>
+                   验证方法  
+                 </td>
+                 <td>
+                    
+      <xmp>  validate: function () { 自定义验证方法 } </xmp>
+                 </td>    
+                  <td>请参考ajaxform.js文件</td>
+                 
+              </tr>
+
+              <tr>
+                 <td>success</td>
+                  <td>
+                   操作成功响应方法 
+                 </td>
+                 <td>
+      <xmp>  success: function () { 自定义操作成功响应方法 }</xmp>
+                   
+                 </td>
+                 
+                  
+                  <td>请参考ajaxform.js文件</td>
+                
+              </tr>
+
+              <tr>
+                 <td>fail</td>
+                  <td>
+                   操作失败响应方法 
+                 </td>
+                 <td>
+      <xmp>  fail: function () { 自定义操作失败响应方法 }</xmp>
+                   
+                 </td>                 
+                  <td>请参考ajaxform.js文件</td>
+                
+              </tr>
+
+
+              <tr>
+                 <td>error</td>
+                  <td>
+                   操作传输异常响应方法 
+                 </td>
+                 <td>
+      <xmp>  error: function () { 自定义操作传输异常响应方法 }</xmp>
+                   
+                 </td>         
+                  <td>请参考ajaxform.js文件</td>
+                
+              </tr>
+              
+                         
+           </table> </div>
+          
+           
+ 
+            <div><h2 id="property">相关验证方法的使用</h2></div>
+         
+    
+</body>
+</html>

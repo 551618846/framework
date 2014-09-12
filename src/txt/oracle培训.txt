@@ -1,0 +1,63 @@
+﻿1,buffer cache:数据缓存。latch锁,block hash function,hash bucket,;dbwr服务写数据文件.
+2,sharedpool:sql缓存;优化:sql绑定变量
+3,PGA:order area，hash area，
+4，log buffer:lowr服务,写redo日志;优化:批量commit减少IO;commit模式:batch;wait/no
+4,修改延时写:写buffer cache,comit写redo日志,不写date file,定时持久化到date file
+
+RAC(主/被模式;负载均衡模式)
+1,私有网络(维护集群同步,心跳)
+2,共享存储
+
+
+2,工具篇
+1,sqlplus
+2,profiler:pl/sql:test window -->profiler
+3,auto trace:
+4,awr/ash:awr:v$按时间间隔做快照分析;ash
+
+启动关闭
+关闭一般使用立即关闭
+
+3,SQL
+表设计规范
+1,建表null字段问题:null字段拍最后
+原因:表定义只在数据字典,不在数据保存时.所以保存数据需要按表定义的结构存放,如果null字段排最后,可以节省记录才存储空间;节省buffer cache
+2,字段类型
+select dump(sysdate) from dual;
+select dump(to_char(sysdate)) from dual;
+3,null值和索引:btree索引不索引null,导致is null等不走索引.方法:赋予默认值
+
+
+索引设计规范
+1,索引与全表扫描效率
+结果集占全表1%,走索引效率高于全表扫描.
+2,字段排序
+3,数据分布图(每种记录的个数)
+4,array size决定数据包大小,网络请求次数.按经验一般设置10-20
+
+
+索引,回表
+执行计划:cost值,rows值.从右到左,从上到下看计划.
+nested loops适用少记录两关联的情况,比如加了筛选后再关联
+hash jion适用较大记录关联的情况,比如两大表直接关联
+性能统计信息:consistent gets;physical reads;sorts(memory);sorts(disk);sql*net roundtrips to/from client;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

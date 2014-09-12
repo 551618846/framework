@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../dist/css/asyncbox.css" rel="stylesheet" />
+    <link href="../dist/js/datepicker/skin/default/datepicker.css" rel="stylesheet" />
+    <link href="../dist/css/zTreeStyle.css" rel="stylesheet" />
+    <link href="../RYGK/Content/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="../RYGK/Content/css/form.css" rel="stylesheet" type="text/css" />
+    <link href="../RYGK/Content/css/gluphicon.css" rel="stylesheet" type="text/css" />
+      <link href="../dist/css/searchSelect.css" rel="stylesheet" />
+    <script src="../dist/js/jquery.min.js"></script>
+    <script src="../dist/js/jquery.form.min.js"></script>
+    <script src="../dist/js/asyncBox.js"></script>
+    <script src="../dist/js/datepicker/WdatePicker.js"></script>
+    <script src="../dist/js/jquery.ztree.js"></script>
+    <script src="../dist/js/jquery.validate.js"></script>
+    <script src="../dist/js/framework.js"></script>
+    <script>
+        function getSelected() {
+            return { Value: "值01", Text: "文本" };
+        }
+    </script>
+</head>
+<body>
+    <form id="dataForm" action="/Data/TestPost.ashx" role="form" class="data-form">
+    <div class="panel">
+        <div class="body">
+            <div class="searchContain">
+                <div class="searchBox">
+                    <input id="Text12" name="input24" type="text" value="" class="lg" placeholder="请输入搜索条件"
+                        data-target="input18" data-url="/Demo/selectList.html" data-rules="{validate:{required: true,messages:{required:'请选择'}}}" />
+                    <button class="searchBtn">
+                        <span class="glyphicon glyphicon-search"></span>搜索
+                    </button>
+                </div>
+                <div class="searchTree">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
